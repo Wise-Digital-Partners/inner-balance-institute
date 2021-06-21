@@ -98,28 +98,48 @@ export const query = graphql`
       relativePath: { eq: "treatments/1.0 treatment hub chiro.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     sciatica: file(
       relativePath: { eq: "treatments/2.0 treatment hub spinal .jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     backPain: file(
       relativePath: { eq: "treatments/3.0 treatment hub physiotherapy.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     shoulderPain: file(
       relativePath: { eq: "treatments/4.0 treatment hub massage.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

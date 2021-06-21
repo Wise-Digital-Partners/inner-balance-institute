@@ -113,42 +113,72 @@ export const query = graphql`
       relativePath: { eq: "injuries/1.0 Inj - hub - auto.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     sciatica: file(
       relativePath: { eq: "injuries/2.0 Inj - hub - sciatica.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     backPain: file(
       relativePath: { eq: "injuries/3.0 Inj - hub - backpain.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     shoulderPain: file(
       relativePath: { eq: "injuries/4.0 Inj - hub - shoulder.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     spinalStenosis: file(
       relativePath: { eq: "injuries/5.0 Inj - hub - spinal.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     herniatedBulgingDiscs: file(
       relativePath: { eq: "injuries/6.0 Inj - hub - hernia.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

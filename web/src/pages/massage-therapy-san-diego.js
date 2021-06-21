@@ -207,21 +207,36 @@ export const query = graphql`
       relativePath: { eq: "massage-therapy/1.0 Hero massage.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 570
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     symptoms: file(
       relativePath: { eq: "massage-therapy/2.0 massage mosaic.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 615
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     treatment: file(
       relativePath: { eq: "massage-therapy/3.0 About massage.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {

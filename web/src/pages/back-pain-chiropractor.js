@@ -231,17 +231,32 @@ export const query = graphql`
       relativePath: { eq: "back-pain/1.0 Hero Back Pain.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 570
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     symptoms: file(relativePath: { eq: "back-pain/2.0 symptoms Collage.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 618
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     treatment: file(relativePath: { eq: "back-pain/3.0 Treatment.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {

@@ -229,21 +229,36 @@ export const query = graphql`
       relativePath: { eq: "chiropractic/1.0 Hero Chiropractic.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 570
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     symptoms: file(
       relativePath: { eq: "chiropractic/2.0 Chiropractic Collage.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 618
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     treatment: file(
       relativePath: { eq: "chiropractic/3.0 About Chiropractic.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 560
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {
