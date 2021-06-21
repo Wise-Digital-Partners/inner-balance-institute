@@ -119,7 +119,7 @@ const Footer = () => {
                     href="https://goo.gl/maps/nTTAXtA4BzxvFiNQ8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm no-underline md:font-semibold text-white hover:text-primary-600"
+                    className="text-sm no-underline md:font-semibold text-primary-600 md:text-white hover:text-primary-600"
                   >
                     <address className="not-italic">
                       1764 San Diego Ave <br />
