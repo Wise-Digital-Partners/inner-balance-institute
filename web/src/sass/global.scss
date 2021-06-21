@@ -1,0 +1,12 @@
+body {
+  @apply overflow-x-hidden selection:bg-primary-300;
+}
+
+.tl-edges {
+  overflow-x: initial !important;
+}
+
+a,
+button {
+  @apply text-primary-600 hover:text-primary-600 cursor-pointer transition-all duration-300 ease-linear;
+}

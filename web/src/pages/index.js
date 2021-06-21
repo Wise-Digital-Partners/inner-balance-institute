@@ -1,112 +1,261 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  filterOutDocsPublishedInTheFuture,
-  filterOutDocsWithoutSlugs,
-  mapEdgesToNodes,
-} from "../lib/helpers";
-import BlogPostPreviewList from "../components/blog-post-preview-list";
-import Container from "../components/container";
-import GraphQLErrorList from "../components/graphql-error-list";
-import SEO from "../components/seo";
-import Layout from "../containers/layout";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-export const query = graphql`
-  fragment SanityImage on SanityMainImage {
-    crop {
-      _key
-      _type
-      top
-      bottom
-      left
-      right
-    }
-    hotspot {
-      _key
-      _type
-      x
-      y
-      height
-      width
-    }
-    asset {
-      _id
-    }
-  }
+import Layout from "../components/Layout";
+import SearchEngineOptimization from "../components/SEO";
+import HeroFullWidth from "../components/Hero/HeroFullWidth";
+import Treatments from "../components/Repeating/Treatments";
+import WhyUs from "../components/Repeating/WhyUs";
+import Testimonials from "../components/Repeating/Testimonials";
+import CallToAction from "../components/Repeating/CTA";
+import ButtonSolid from "../components/Button/ButtonSolid";
+import ButtonUnderline from "../components/Button/ButtonUnderline";
 
-  query IndexPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
-  }
-`;
+const Page = ({ data }) => {
+  const heroFullWidthImages = [
+    getImage(data.heroDesktop.childImageSharp.gatsbyImageData),
+    {
+      ...getImage(data.heroMobile.childImageSharp.gatsbyImageData),
+      media: `(max-width: 767px)`,
+    },
+  ];
 
-const IndexPage = (props) => {
-  const { data, errors } = props;
-
-  if (errors) {
-    return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
-    );
-  }
-
-  const site = (data || {}).site;
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
-    : [];
-
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    );
-  }
+  const services = [
+    {
+      image: data.autoAccidents.childImageSharp.gatsbyImageData,
+      heading: "Auto Accidents",
+      text: "Let our experts in both treatment and insurance processing guide you back to wellness.",
+      link: "/car-accident-chiropractor/",
+    },
+    {
+      image: data.sciatica.childImageSharp.gatsbyImageData,
+      heading: "Sciatica",
+      text: "Are you suffering from sciatica or sciatic pain? Our experienced chiropractors can help.",
+      link: "/sciatica-chiropractor/",
+    },
+    {
+      image: data.backPain.childImageSharp.gatsbyImageData,
+      heading: "Back Pain",
+      text: "Treat back pain to improve stability and provide mobility for your everyday motions.",
+      link: "/back-pain-chiropractor/",
+    },
+    {
+      image: data.shoulderPain.childImageSharp.gatsbyImageData,
+      heading: "Shoulder Pain",
+      text: "Alleviate pain and discomfort with a tailored treatment plan for shoulder pain.",
+      link: "/shoulder-pain-chiropractor/",
+    },
+    {
+      image: data.spinalStenosis.childImageSharp.gatsbyImageData,
+      heading: "Spinal Stenosis",
+      text: "Find relief from spinal stenosis with a safe, natural, and effective approach.",
+      link: "/spinal-stenosis-chiropractor/",
+    },
+    {
+      image: data.herniatedBulgingDiscs.childImageSharp.gatsbyImageData,
+      heading: "Herniated & Bulging Discs",
+      text: "Treat herniated and bulging discs with proper chiropractic technique and care.",
+      link: "/herniated-bulging-discs-chiropractor/",
+    },
+  ];
 
   return (
-    <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
+    <Layout headerStyle="overlap-hero" headerLinkColor="white">
+      <SearchEngineOptimization
+        title=""
+        description=""
+        // openGraphImage={data.openGraphImage.publicURL}
+        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {postNodes && (
-          <BlogPostPreviewList
-            title="Latest blog posts"
-            nodes={postNodes}
-            browseMoreHref="/archive/"
-          />
-        )}
-      </Container>
+
+      <HeroFullWidth
+        backgroundImages={heroFullWidthImages}
+        backgroundPosition="50% 25%"
+        padding="pt-72 md:pt-80 pb-8 md:pb-52"
+        textAlignment="text-center md:text-left"
+        textMaxWidth=""
+        className="rounded-b-5xl md:rounded-b-8xl overflow-hidden"
+      >
+        <p className="text-mobile-7xl md:text-7xl font-heading font-bold uppercase text-white mb-3 md:mb-4">
+          Top San Diego Chiropractor
+        </p>
+        <p className="md:text-3xl font-body font-semibold md:font-normal text-white mb-5 md:mb-8">
+          Our award-winning clinic will bring your body back into balance.
+        </p>
+        <ButtonSolid
+          as="button"
+          modal="modal-contact"
+          text="Get Started"
+          className="w-full md:w-auto"
+        />
+      </HeroFullWidth>
+
+      <section className="bg-white pt-8 md:pt-8 mb-20 md:mb-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 items-center gap-y-4 md:gap-x-8 lg:gap-x-12">
+            <div>
+              <GatsbyImage
+                image={data.intro.childImageSharp.gatsbyImageData}
+                alt="Voted Best Chiropractor in San Diego, CA"
+              />
+            </div>
+            <div>
+              <h1>
+                Voted Best Chiropractor in{" "}
+                <span className="whitespace-nowrap">San Diego</span>, CA
+              </h1>
+              <p className="text-primary-900 mb-0">
+                Welcome to Inner Balance Institute, your top San Diego
+                chiropractor. We’ve been providing chiropractic care to the San
+                Diego community since 1997 and we are committed to the health of
+                our patients! Our talented team is here to help, whether it’s
+                for personal injuries, spinal decompression, or to support your
+                overall health.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-20 md:mb-32">
+        <div className="container">
+          <header className="mb-12 md:mb-16 max-w-2xl">
+            <h2>Injuries We Treat</h2>
+            <p>
+              At Inner Balance Institute, our chiropractors treat a variety of
+              injuries and help prevent them. Here’s what we treat using
+              non-invasive and effective techniques.
+            </p>
+          </header>
+
+          <div className="grid md:grid-cols-3 gap-y-10 md:gap-y-14 md:gap-x-10">
+            {services.map((service, i) => {
+              return (
+                <div className="group relative" key={i}>
+                  <div className="relative mb-5">
+                    <GatsbyImage image={service.image} alt={service.heading} />
+                    <div className="absolute w-full h-full left-0 top-0 bg-primary-300/50 opacity-0 md:group-hover:opacity-100 transition-all duration-300 ease-linear"></div>
+                  </div>
+                  <h3 className="text-mobile-3xl md:text-3xl mb-4">
+                    {service.heading}
+                  </h3>
+                  <p className="text-lg mb-0">{service.text}</p>
+                  <AniLink fade to={service.link}>
+                    <span className="absolute top-0 left-0 h-full w-full z-10"></span>
+                  </AniLink>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <Treatments />
+      <WhyUs />
+      <Testimonials />
+
+      <section className="bg-white pt-8 md:pt-8 mb-20 md:mb-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 items-center gap-y-4 md:gap-x-10s lg:gap-x-20">
+            <div>
+              <h2>Your Partners in Wellness</h2>
+              <p>
+                At Inner Balance Institute, we’re partners on your journey back
+                to wellness. Our goal is to relieve your pain, stress, and
+                worries. Our approach is to educate you every step of the way
+                through your chiropractic care, specialized exercise tailored to
+                your needs, and nutritional guidance to improve vitality and
+                energy.
+              </p>
+              <ButtonUnderline href="#" text="Learn More" />
+            </div>
+            <div>
+              <GatsbyImage
+                image={data.partners.childImageSharp.gatsbyImageData}
+                alt="Voted Best Chiropractor in San Diego, CA"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CallToAction />
     </Layout>
   );
 };
 
-export default IndexPage;
+export const query = graphql`
+  {
+    openGraphImage: file(
+      relativePath: { eq: "open-graph/facebook/Homepage_FB.jpg" }
+    ) {
+      publicURL
+    }
+    twitterOpenGraphImage: file(
+      relativePath: { eq: "open-graph/twitter/Homepage_TW.jpg" }
+    ) {
+      publicURL
+    }
+    heroDesktop: file(relativePath: { eq: "home/1.0 Hero Desktop.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    heroMobile: file(relativePath: { eq: "home/1.0 Hero Mobile.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    intro: file(relativePath: { eq: "home/2.0 Home - collage.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    autoAccidents: file(
+      relativePath: { eq: "home/3.0 Home - Auto Accident.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    sciatica: file(relativePath: { eq: "home/3.1 Home - Sciatica.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    backPain: file(relativePath: { eq: "home/3.2 Home - Back Pain.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    shoulderPain: file(
+      relativePath: { eq: "home/3.3 Home - Shoulder Pain.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    spinalStenosis: file(
+      relativePath: { eq: "home/3.4 Home - Spinal stenosis.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    herniatedBulgingDiscs: file(
+      relativePath: { eq: "home/3.5 Home - Hernieted and Bulging Disc.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    partners: file(relativePath: { eq: "home/4.0 Home - Wellnes.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+  }
+`;
+export default Page;

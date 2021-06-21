@@ -1,0 +1,30 @@
+.slick-slide {
+  div {
+    @apply outline-none;
+  }
+  q {
+    @apply block;
+  }
+}
+.slick-prev,
+.slick-next {
+  @apply before:hidden transition-all duration-300 ease-linear z-10;
+  i {
+    @apply transition-all duration-300 ease-linear;
+  }
+}
+.slick-prev {
+  @apply left-0 #{!important};
+}
+.slick-next {
+  @apply right-0 #{!important};
+}
+.slick-dots {
+  @apply bottom-0 #{!important};
+  li {
+    button {
+      @apply p-0 #{!important};
+      @apply rounded-full before:hidden transition-all duration-300 ease-linear;
+    }
+  }
+}
