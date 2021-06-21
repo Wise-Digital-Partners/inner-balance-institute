@@ -17,12 +17,10 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
       offcanvasNavigation = document.querySelector("#offcanvas-navigation"),
       bodyContent = document.querySelector("#body-content");
 
-    // calculate #offcanvas-navigation menu offset top
-    offcanvasNavigation.style.top = mainNavigation.offsetHeight + "px";
-
     const handleLoad = () => {
       // calculate #offcanvas-navigation menu offset top
-      offcanvasNavigation.style.top = mainNavigation.offsetHeight + "px";
+      offcanvasNavigation.style.top =
+        siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
     };
 
     const handleResize = () => {
@@ -31,9 +29,6 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
     };
 
     const handleScroll = () => {
-      // recalculate #offcanvas-navigation offset top on scroll
-      // offcanvasNavigation.style.top = (siteNavigation.offsetHeight - window.scrollY ) + 'px' ;
-
       let isScrolled;
 
       if (utilityNavigation !== null && promoBar !== null) {
@@ -64,6 +59,9 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
       } else {
         setScrolled(false);
 
+        // calculate #offcanvas-navigation menu offset top
+        offcanvasNavigation.style.top = siteNavigation.offsetHeight + "px";
+
         // recalculate #body-content offset top on scroll
         if (headerStyle === "overlap" || headerStyle === "overlap-hero") {
           // bodyContent.style.marginTop = "-" + mainNavigation.offsetHeight + "px";
@@ -77,7 +75,12 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
 
     document.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleResize, { passive: true });
-    window.addEventListener("load", handleLoad, { passive: true });
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad, { passive: true });
+    }
 
     return () => {
       document.removeEventListener("scroll", handleScroll);

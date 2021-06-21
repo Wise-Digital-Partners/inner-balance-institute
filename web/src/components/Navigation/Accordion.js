@@ -27,9 +27,7 @@ const Accordion = ({ title, children }) => {
         className="overflow-auto transition-all duration-300 ease-linear"
         style={{ maxHeight: `${setHeight}` }}
       >
-        <div className="submenu pt-2 flex-col pl-0 space-y-2 pb-0">
-          {children}
-        </div>
+        <div className="submenu pt-4 flex-col space-y-2">{children}</div>
       </div>
     </ul>
   );

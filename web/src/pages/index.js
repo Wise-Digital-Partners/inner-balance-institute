@@ -169,7 +169,7 @@ const Page = ({ data }) => {
                 your needs, and nutritional guidance to improve vitality and
                 energy.
               </p>
-              <ButtonUnderline href="#" text="Learn More" />
+              <ButtonUnderline href="/about/" text="Learn More" />
             </div>
             <div>
               <GatsbyImage

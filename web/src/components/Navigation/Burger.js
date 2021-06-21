@@ -21,7 +21,7 @@ const StyledBurger = styled.button`
     }
     &:nth-of-type(3) {
       transform: ${({ offcanvasOpen }) =>
-        offcanvasOpen ? "translateY(2px) rotate(-45deg)" : "rotate(0)"};
+        offcanvasOpen ? "translateY(-1px) rotate(-45deg)" : "rotate(0)"};
     }
   }
 `;

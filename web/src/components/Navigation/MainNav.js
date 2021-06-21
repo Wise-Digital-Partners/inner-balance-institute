@@ -9,7 +9,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Burger from "./Burger";
 import OffCanvas from "../OffCanvas/OffCanvas";
 import ButtonSolid from "../Button/ButtonSolid";
-// import ButtonGhost from "../Button/ButtonGhost";
+import ButtonGhost from "../Button/ButtonGhost";
 import Accordion from "./Accordion";
 
 const StyledMainNav = styled.nav`
@@ -39,42 +39,14 @@ const StyledMainNav = styled.nav`
           ${tw`text-primary-300`}
         }
       }
-      &.active {
-        ${tw`text-primary-300`}
-      }
-    }
-    .submenu-parent {
-      ${tw`relative`}
-      .submenu {
-        ${tw`absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear`}
-        li {
-          ${tw`whitespace-nowrap`}
-          a {
-            ${tw`relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline`}
-          }
-        }
-      }
-      &:hover {
-        .submenu {
-          ${tw`opacity-100 visible translate-y-4`}
-        }
-      }
     }
   }
 
   #navigation-mobile {
     > li {
-      ${tw`flex justify-center text-center space-y-10`}
       > a,
       button {
-        ${tw`font-heading text-6xl text-gray-600 hover:text-gray-600 font-bold no-underline text-left focus:outline-none transition-colors duration-300 ease-linear`}
-      }
-    }
-    .submenu {
-      li {
-        a {
-          ${tw`font-body tracking-wider leading-5 text-gray-600 text-opacity-80 hover:text-opacity-100 no-underline`}
-        }
+        ${tw`font-body text-xl text-white hover:text-white font-bold uppercase no-underline text-left focus:outline-none transition-colors duration-300 ease-linear`}
       }
     }
   }
@@ -140,6 +112,75 @@ const MainNav = ({
     stickyLogo = data.darkLogo.publicURL;
   }
 
+  const navigation = {
+    injuries: [
+      {
+        name: "All Injuries",
+        href: "/injuries-we-treat/",
+      },
+      {
+        name: "Auto Accident",
+        href: "/car-accident-chiropractor/",
+      },
+      {
+        name: "Sciatica",
+        href: "/sciatica-chiropractor/",
+      },
+      {
+        name: "Back Pain",
+        href: "/back-pain-chiropractor/",
+      },
+      {
+        name: "Shoulder Pain",
+        href: "/shoulder-pain-chiropractor/",
+      },
+      {
+        name: "Spinal Stenosis",
+        href: "/spinal-stenosis-chiropractor/",
+      },
+      {
+        name: "Herniated or Bulging Discs",
+        href: "/herniated-bulging-discs-chiropractor/",
+      },
+    ],
+    treatments: [
+      {
+        name: "All Treatments",
+        href: "/chiropractic-treatments/",
+      },
+      {
+        name: "Chiropractic Care",
+        href: "/chiropractic-care-san-diego/",
+      },
+      {
+        name: "Spinal Decompression Therapy",
+        href: "/spinal-decompression-therapy-san-diego/",
+      },
+      {
+        name: "Physiotherapy",
+        href: "/physiotherapy-san-diego/",
+      },
+      {
+        name: "Massage Therapy",
+        href: "/massage-therapy-san-diego/",
+      },
+    ],
+    about: [
+      {
+        name: "About",
+        href: "/about/",
+      },
+      {
+        name: "FAQ",
+        href: "/faq/",
+      },
+      {
+        name: "Articles",
+        href: "/blog/",
+      },
+    ],
+  };
+
   return (
     <StyledMainNav
       id="main-navigation"
@@ -190,7 +231,7 @@ const MainNav = ({
             className="hidden lg:flex lg:flex-row lg:space-x-6 xl:space-x-8 lg:items-center lg:justify-end lg:ml-6 xl:ml-12"
           >
             <li
-              className={`submenu-parent ${subMenuHovering1 ? "active" : ""}`}
+              className={`group relative ${subMenuHovering1 ? "active" : ""}`}
             >
               <AniLink
                 fade
@@ -200,42 +241,22 @@ const MainNav = ({
               >
                 Injuries We Treat
               </AniLink>
-              <ul className="submenu">
-                <li>
-                  <AniLink fade to="/car-accident-chiropractor/">
-                    Auto Accident
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/sciatica-chiropractor/">
-                    Sciatica
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/back-pain-chiropractor/">
-                    Back Pain
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/shoulder-pain-chiropractor/">
-                    Shoulder Pain
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/spinal-stenosis-chiropractor/">
-                    Spinal Stenosis
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/herniated-bulging-discs-chiropractor/">
-                    Herniated or Bulging Discs
-                  </AniLink>
-                </li>
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+                {navigation.injuries.slice(1).map((item) => (
+                  <li key={item.name} className="whitespace-nowrap">
+                    <a
+                      href={item.href}
+                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </li>
 
             <li
-              className={`submenu-parent ${subMenuHovering2 ? "active" : ""}`}
+              className={`group relative ${subMenuHovering2 ? "active" : ""}`}
             >
               <AniLink
                 fade
@@ -245,32 +266,22 @@ const MainNav = ({
               >
                 Treatments
               </AniLink>
-              <ul className="submenu">
-                <li>
-                  <AniLink fade to="/chiropractic-care-san-diego/">
-                    Chiropractic Care
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/spinal-decompression-therapy-san-diego/">
-                    Spinal Decompression Therapy
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/physiotherapy-san-diego/">
-                    Physiotherapy
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/massage-therapy-san-diego/">
-                    Massage Therapy
-                  </AniLink>
-                </li>
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+                {navigation.treatments.slice(1).map((item) => (
+                  <li key={item.name} className="whitespace-nowrap">
+                    <a
+                      href={item.href}
+                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </li>
 
             <li
-              className={`submenu-parent ${subMenuHovering3 ? "active" : ""}`}
+              className={`group relative ${subMenuHovering3 ? "active" : ""}`}
             >
               <AniLink
                 fade
@@ -280,17 +291,17 @@ const MainNav = ({
               >
                 About
               </AniLink>
-              <ul className="submenu">
-                <li>
-                  <AniLink fade to="/faq/">
-                    FAQ
-                  </AniLink>
-                </li>
-                <li>
-                  <AniLink fade to="/blog/">
-                    Articles
-                  </AniLink>
-                </li>
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+                {navigation.about.slice(1).map((item) => (
+                  <li key={item.name} className="whitespace-nowrap">
+                    <a
+                      href={item.href}
+                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>
@@ -320,137 +331,68 @@ const MainNav = ({
               aria-controls="offcanvas-navigation"
             />
             <OffCanvas offcanvasOpen={offcanvasOpen} id="offcanvas-navigation">
-              <ul id="navigation-mobile" className="mb-20">
-                <li className="mb-7">
-                  <Accordion title="Services" className="submenu-parent">
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        All Services
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Weddings
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Social Events
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Corporate
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Food Truck
-                      </AniLink>
-                    </li>
+              <ul
+                id="navigation-mobile"
+                className="flex flex-col space-y-7 mb-20"
+              >
+                <li className="flex justify-center text-center">
+                  <Accordion
+                    title="Injuries We Treat"
+                    className="submenu-parent"
+                  >
+                    {navigation.injuries.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="font-body text-white font-semibold no-underline"
+                          onKeyDown={clickHandler}
+                          onClick={clickHandler}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
                   </Accordion>
                 </li>
-                <li className="mb-7">
-                  <AniLink
-                    fade
-                    to="#"
-                    onKeyDown={clickHandler}
-                    onClick={clickHandler}
-                  >
-                    Menus
-                  </AniLink>
+                <li className="flex justify-center text-center">
+                  <Accordion title="Treatments" className="submenu-parent">
+                    {navigation.treatments.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="font-body text-white font-semibold no-underline"
+                          onKeyDown={clickHandler}
+                          onClick={clickHandler}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </Accordion>
                 </li>
-                <li className="mb-7">
+                <li className="flex justify-center text-center">
                   <Accordion title="About" className="submenu-parent">
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Our Company
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        FAQs
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Careers
-                      </AniLink>
-                    </li>
-                    <li>
-                      <AniLink
-                        fade
-                        to="#"
-                        onKeyDown={clickHandler}
-                        onClick={clickHandler}
-                      >
-                        Blog
-                      </AniLink>
-                    </li>
+                    {navigation.about.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="font-body text-white font-semibold no-underline"
+                          onKeyDown={clickHandler}
+                          onClick={clickHandler}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
                   </Accordion>
                 </li>
               </ul>
 
-              <div className="flex justify-center space-x-3 mb-12">
-                <a
-                  href="https://www.facebook.com/flavorchefcatering/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center rounded-full text-white md:text-white bg-primary-600 hover:bg-primary-600 no-underline"
-                >
-                  <i className="fab fa-facebook-f text-sm"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/flavorchefcatering/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center rounded-full text-white md:text-white bg-primary-600 hover:bg-primary-600  no-underline"
-                >
-                  <i className="fab fa-instagram text-sm"></i>
-                </a>
-              </div>
-
-              <div className="flex justify-center">
+              <div className="grid gap-y-4">
+                <ButtonGhost
+                  href="tel:619-543-9999"
+                  text="Call or Text (619) 543-9999"
+                />
                 <ButtonSolid as="button" modal="modal-contact" text="Contact" />
               </div>
             </OffCanvas>
