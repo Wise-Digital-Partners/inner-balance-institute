@@ -116,7 +116,7 @@ const Modal = () => {
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex justify-between items-center border-b border-solid border-gray-50 border-opacity-20 py-4 px-6 md:pl-20 md:pr-6">
+            <div className="flex justify-between items-center border-b border-solid border-gray-50 border-opacity-20 pt-10 pb-4 md:py-4 px-6 md:pl-20 md:pr-6">
               <a href="tel:619-543-9999" className="text-white font-semibold">
                 <i className="fas fa-phone-alt mr-2"></i> (619) 543-9999
               </a>
