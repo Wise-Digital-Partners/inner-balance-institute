@@ -210,50 +210,90 @@ export const query = graphql`
     }
     intro: file(relativePath: { eq: "home/2.0 Home - collage.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 534
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     autoAccidents: file(
       relativePath: { eq: "home/3.0 Home - Auto Accident.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     sciatica: file(relativePath: { eq: "home/3.1 Home - Sciatica.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     backPain: file(relativePath: { eq: "home/3.2 Home - Back Pain.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     shoulderPain: file(
       relativePath: { eq: "home/3.3 Home - Shoulder Pain.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     spinalStenosis: file(
       relativePath: { eq: "home/3.4 Home - Spinal stenosis.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     herniatedBulgingDiscs: file(
       relativePath: { eq: "home/3.5 Home - Hernieted and Bulging Disc.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 373
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     partners: file(relativePath: { eq: "home/4.0 Home - Wellnes.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 607
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

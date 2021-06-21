@@ -226,14 +226,14 @@ export const query = graphql`
       }
     }
     symptoms: file(
-      relativePath: { eq: "chiropractic/2.0 Chiropractic Collage.png" }
+      relativePath: { eq: "physiotherapy/2.0 Physiotherapy mosaic.png" }
     ) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     treatment: file(
-      relativePath: { eq: "chiropractic/3.0 About Chiropractic.jpg" }
+      relativePath: { eq: "physiotherapy/3.0 About physical T.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
