@@ -150,7 +150,12 @@ export default class Form extends Component {
             />
           </div>
 
-          <ButtonSolid as="button" type="submit" text="Send Message" />
+          <ButtonSolid
+            as="button"
+            type="submit"
+            text="Send Message"
+            className="w-full md:w-auto"
+          />
         </form>
       </StyledForm>
     );

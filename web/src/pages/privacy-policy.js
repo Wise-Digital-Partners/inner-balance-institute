@@ -10,14 +10,14 @@ const Page = () => {
           <h1>Privacy Policy</h1>
           <p>
             Protecting your private information is our priority. This Statement
-            of Privacy applies to https://flavorchefcatering.com, and Flavor
-            Chef Catering and governs data collection and usage. For the
+            of Privacy applies to https://innerbalanceinstitute.com/, and Inner
+            Balance Institute and governs data collection and usage. For the
             purposes of this Privacy Policy, unless otherwise noted, all
             references to Inner Balance Institute include
-            https://flavorchefcatering.com. The Inner Balance Institute website
-            is a general informational site. By using the Inner Balance
-            Institute Catering website, you consent to the data practices
-            described in this statement. 
+            https://innerbalanceinstitute.com/. The Inner Balance Institute
+            website is a general informational site. By using the Inner Balance
+            Institute website, you consent to the data practices described in
+            this statement. 
           </p>
           <h3>Collection of your Personal Information</h3>
           <p>
@@ -66,17 +66,16 @@ const Page = () => {
             perform statistical analysis, send you email or postal mail, provide
             customer support, or arrange for deliveries. All such third parties
             are prohibited from using your personal information except to
-            provide these services to IInner Balance Institute Catering, and
-            they are required to maintain the confidentiality of your
-            information. 
+            provide these services to Inner Balance Institute, and they are
+            required to maintain the confidentiality of your information. 
           </p>
           <p>
             Inner Balance Institute may disclose your personal information,
             without notice, if required to do so by law or in the good faith
             belief that such action is necessary to: (a) conform to the edicts
             of the law or comply with legal process served on IInner Balance
-            Institute Catering or the site; (b) protect and defend the rights or
-            property of Inner Balance Institute; and/or (c) act under exigent
+            Institute or the site; (b) protect and defend the rights or property
+            of Inner Balance Institute; and/or (c) act under exigent
             circumstances to protect the personal safety of users of Inner
             Balance Institute, or the public. 
           </p>
@@ -104,8 +103,8 @@ const Page = () => {
             feature to save you time. The purpose of a cookie is to tell the Web
             server that you have returned to a specific page. For example, if
             you personalize Inner Balance Institute pages, or register with
-            Flavor Chef Catering site or services, a cookie helps IInner Balance
-            Institute Catering to recall your specific information on subsequent
+            Inner Balance Institute site or services, a cookie helps IInner
+            Balance Institute to recall your specific information on subsequent
             visits. This simplifies the process of recording your personal
             information, such as billing addresses, shipping addresses, and so
             on. When you return to the same Inner Balance Institute website, the
@@ -226,8 +225,8 @@ const Page = () => {
             for the purpose of providing announcements, promotional offers,
             alerts, confirmations, surveys, and/or other general communication.
             In order to improve our Services, we may receive a notification when
-            you open an email from Inner Balance Institute Catering or click on
-            a link therein. 
+            you open an email from Inner Balance Institute or click on a link
+            therein. 
           </p>
           <p>
             If you would like to stop receiving marketing or promotional
@@ -250,16 +249,15 @@ const Page = () => {
           <p>
             Inner Balance Institute welcomes your questions or comments
             regarding this Statement of Privacy. If you believe that Inner
-            Balance Institute Catering has not adhered to this Statement, please
-            contact Inner Balance Institute at: 
+            Balance Institute has not adhered to this Statement, please contact
+            Inner Balance Institute at: 
           </p>
           <p>Inner Balance Institute </p>
           <p>
             Email Address: 
             <br />
-            flavorchefcatering@gmail.com
           </p>
-          <p>Effective as of June 7, 2021 </p>
+          <p>Effective as of June 21, 2021 </p>
         </div>
       </section>
     </Layout>

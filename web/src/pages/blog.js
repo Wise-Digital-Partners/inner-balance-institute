@@ -56,8 +56,8 @@ const ArchivePage = (props) => {
   return (
     <Layout>
       <SearchEngineOptimization
-        title="Blog | Full-Service Catering Company | Inner Balance Institute"
-        description="Find inspiration for your next event in our Flavor Fresh Catering blog, which includes features and photos from our work as a full-service catering company."
+        title=""
+        description=""
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

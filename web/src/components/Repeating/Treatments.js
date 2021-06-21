@@ -46,25 +46,25 @@ const Treatments = ({ className, headingLevel }) => {
     {
       heading: "Chiropractic Care",
       text: "We offer one of the most complete and comprehensive initial examinations available.",
-      link: "#",
+      link: "/chiropractic-care-san-diego/",
       image: data.chiropractic.childImageSharp.gatsbyImageData,
     },
     {
       heading: "Spinal Decompression",
       text: "Consider our newest, non-invasive, and non-surgical spinal treatment for your back pain!",
-      link: "#",
+      link: "/spinal-decompression-therapy-san-diego/",
       image: data.massageTherapy.childImageSharp.gatsbyImageData,
     },
     {
       heading: "Physiotherapy",
       text: "We provide exceptional guidance in developing a tailored program for your alignment.",
-      link: "#",
+      link: "/physiotherapy-san-diego/",
       image: data.phisiotherapy.childImageSharp.gatsbyImageData,
     },
     {
       heading: "Massage Therapy",
       text: "Relieve pain, rehabilitate an injury, and reduce stress at the same time with massage therapy.",
-      link: "#",
+      link: "/massage-therapy-san-diego/",
       image: data.spinalDecompression.childImageSharp.gatsbyImageData,
     },
   ];

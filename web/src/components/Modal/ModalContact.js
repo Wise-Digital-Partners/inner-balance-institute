@@ -112,7 +112,7 @@ const Modal = () => {
           data-modal-close
         >
           <div
-            className="content-wrapper bg-primary-900 w-full h-screen overflow-auto max-w-[720px] ml-auto rounded-l-6xl"
+            className="content-wrapper bg-primary-900 w-full h-screen overflow-auto max-w-[720px] ml-auto md:rounded-l-6xl"
             role="dialog"
             aria-modal="true"
           >

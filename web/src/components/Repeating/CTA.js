@@ -45,7 +45,7 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
                 className="mx-auto md:w-full"
               />
               <ButtonGhost
-                href="modal-contact"
+                href="tel:619-543-9999"
                 text={[<i class="fas fa-phone mr-2"></i>, "(619) 543-9999"]}
                 className="mx-auto md:w-full"
               />

@@ -106,7 +106,7 @@ const Page = ({ data }) => {
                 Voted Best Chiropractor in{" "}
                 <span className="whitespace-nowrap">San Diego</span>, CA
               </h1>
-              <p className="text-primary-900 mb-0">
+              <p className="text-primary-900 md:text-lg mb-0">
                 Welcome to Inner Balance Institute, your top San Diego
                 chiropractor. We’ve been providing chiropractic care to the San
                 Diego community since 1997 and we are committed to the health of
@@ -123,7 +123,7 @@ const Page = ({ data }) => {
         <div className="container">
           <header className="mb-12 md:mb-16 max-w-2xl">
             <h2>Injuries We Treat</h2>
-            <p>
+            <p className="md:text-lg">
               At Inner Balance Institute, our chiropractors treat a variety of
               injuries and help prevent them. Here’s what we treat using
               non-invasive and effective techniques.
@@ -161,7 +161,7 @@ const Page = ({ data }) => {
           <div className="grid md:grid-cols-2 items-center gap-y-4 md:gap-x-10s lg:gap-x-20">
             <div>
               <h2>Your Partners in Wellness</h2>
-              <p>
+              <p className="md:text-lg">
                 At Inner Balance Institute, we’re partners on your journey back
                 to wellness. Our goal is to relieve your pain, stress, and
                 worries. Our approach is to educate you every step of the way
