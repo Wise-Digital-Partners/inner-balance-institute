@@ -93,7 +93,7 @@ const Testimonial = ({ className, headingLevel }) => {
   return (
     <BgImage
       image={data.background.childImageSharp.gatsbyImageData}
-      className={`pt-16 md:pt-10 pb-16 md:pb-28 ${
+      className={`overflow-hidden pt-16 md:pt-10 pb-16 md:pb-28 ${
         className || "mb-20 md:mb-32"
       }`}
     >

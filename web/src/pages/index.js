@@ -92,16 +92,16 @@ const Page = ({ data }) => {
         />
       </HeroFullWidth>
 
-      <section className="bg-white pt-8 md:pt-8 mb-20 md:mb-20">
+      <section className="bg-white pt-8 md:pt-8 mb-12 md:mb-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 items-center gap-y-4 md:gap-x-8 lg:gap-x-12">
-            <div>
+          <div className="grid md:grid-cols-2 items-center gap-y-10 md:gap-x-8 lg:gap-x-12">
+            <div className="order-2 md:order-1">
               <GatsbyImage
                 image={data.intro.childImageSharp.gatsbyImageData}
                 alt="Voted Best Chiropractor in San Diego, CA"
               />
             </div>
-            <div>
+            <div className="order-1 md:order-2">
               <h1>
                 Voted Best Chiropractor in{" "}
                 <span className="whitespace-nowrap">San Diego</span>, CA
@@ -130,7 +130,7 @@ const Page = ({ data }) => {
             </p>
           </header>
 
-          <div className="grid md:grid-cols-3 gap-y-10 md:gap-y-14 md:gap-x-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-10 sm:gap-y-14 sm:gap-x-6 md:gap-x-10">
             {services.map((service, i) => {
               return (
                 <div className="group relative" key={i}>
