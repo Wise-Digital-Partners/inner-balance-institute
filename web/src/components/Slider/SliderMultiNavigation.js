@@ -194,9 +194,6 @@ export default class Slider extends Component {
             <i className="fal fa-arrow-left text-2xl focus:no-underline"></i>
           </button>
 
-          {this.state.currentSlide}
-          {this.state.nav1.slideCount}
-
           {/* <div className="text-sm font-heading font-bold tracking-wider mx-8">
                 <span className="text-black">
                   {"0"}
