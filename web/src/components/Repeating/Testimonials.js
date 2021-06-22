@@ -8,6 +8,9 @@ import tw from "twin.macro";
 import Slider from "../Slider/SliderStandard";
 
 const StyledSlider = styled.div`
+.slick-track {
+  ${tw`flex items-center`}
+}
   .slick-list {
     ${tw`overflow-visible`}
   }
@@ -64,6 +67,20 @@ const Testimonial = ({ className, headingLevel }) => {
           gatsbyImageData(layout: FIXED, width: 125, quality: 100)
         }
       }
+      google: file(
+        relativePath: { eq: "reviews/google.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 110, quality: 100)
+        }
+      }
+      yelp: file(
+        relativePath: { eq: "reviews/yelp.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 84, quality: 100)
+        }
+      }
     }
   `);
 
@@ -76,15 +93,15 @@ const Testimonial = ({ className, headingLevel }) => {
     },
     {
       quote:
-        "This is the place to go! Dr. Tim knows his stuff! I had been dealing with back pain from my military service with the Marines. It was something I was accepting as my future until I visited this place. I feel so much better and I am not even finished just yet. I definitely have an increased quality of life!",
-      name: "Robert J.",
-      platform: data.facebook.childImageSharp.gatsbyImageData,
+        "Dr. Shannahan is the BEST chiropractor. I got into a major car accident and was severely injured, including my back and neck. Dr. Shannahan was the reason why I was able to recover from my injuries. He truly cares about his patients and takes the time to individualize a treatment plan. His hands-on approach to health care, including patient examination, diagnosis, and treatment, put me on a path to recovery. If it wasn't for him, I don't know how I would have been able to recover. His service was EXCELLENT, and I highly recommend him to anyone.",
+      name: "Michelle.",
+      platform: data.google.childImageSharp.gatsbyImageData,
     },
     {
       quote:
-        "This is the place to go! Dr. Tim knows his stuff! I had been dealing with back pain from my military service with the Marines. It was something I was accepting as my future until I visited this place. I feel so much better and I am not even finished just yet. I definitely have an increased quality of life!",
-      name: "Robert J.",
-      platform: data.facebook.childImageSharp.gatsbyImageData,
+        "Dr. Tim and the Inner Balance Institute saved my life! I CANNOT say enough good about this place. When I was in need, Dr. Tim was there, and he is caring and passionate about what he does. I injured myself from a fall and was walking crooked and,after refusing back surgery options, I began another healing route. Dr. Tim, in one visit, helped alleviate some of the worst pain I've ever experienced in my life. Through more visits, I was slowly but surely able to walk straight again and get out of a crooked mess. Thank you, Dr. Tim and staff, for the hospitality, the dedication, the caring tones in your voices. You all were really there for me when I was experiencing horrible pain. Because of your continued care and a healthy lifestyle, I can walk upright and even run for a while. Thank you, thank you, thank you.",
+      name: "Price C.",
+      platform: data.yelp.childImageSharp.gatsbyImageData,
     },
   ];
 

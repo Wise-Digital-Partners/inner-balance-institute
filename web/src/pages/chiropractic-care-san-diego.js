@@ -51,8 +51,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Chiropractic Care San Diego | Inner Balance Institute"
+        description="We offer chiropractic care that can treat many kinds of injuries. Experience pain relief from a team voted best in San Diego!"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

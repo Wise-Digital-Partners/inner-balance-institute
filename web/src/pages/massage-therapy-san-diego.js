@@ -36,8 +36,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Massage Therapy San Diego | Inner Balance Institute"
+        description="Relieve pain, rehabilitate an injury, and reduce stress at the same time with massage therapy at San Diego's Inner Balance Institute."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

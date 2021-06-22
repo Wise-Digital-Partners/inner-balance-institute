@@ -25,7 +25,8 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
 
     const handleResize = () => {
       // calculate #offcanvas-navigation offset top on resize
-      offcanvasNavigation.style.top = siteNavigation.offsetHeight + "px";
+      offcanvasNavigation.style.top =
+        siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
     };
 
     const handleScroll = () => {

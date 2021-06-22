@@ -15,28 +15,28 @@ const Treatments = ({ className, headingLevel }) => {
         relativePath: { eq: "repeating/Treatments/Chiropractic.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 360, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
         }
       }
       massageTherapy: file(
         relativePath: { eq: "repeating/Treatments/Massage therapy.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 360, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
         }
       }
       phisiotherapy: file(
         relativePath: { eq: "repeating/Treatments/Phisiotherapy.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 360, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
         }
       }
       spinalDecompression: file(
         relativePath: { eq: "repeating/Treatments/Spinal-Decompression.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 360, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
         }
       }
     }
@@ -53,7 +53,7 @@ const Treatments = ({ className, headingLevel }) => {
       heading: "Spinal Decompression",
       text: "Consider our newest, non-invasive, and non-surgical spinal treatment for your back pain!",
       link: "/spinal-decompression-therapy-san-diego/",
-      image: data.massageTherapy.childImageSharp.gatsbyImageData,
+      image: data.spinalDecompression.childImageSharp.gatsbyImageData,
     },
     {
       heading: "Physiotherapy",
@@ -65,19 +65,19 @@ const Treatments = ({ className, headingLevel }) => {
       heading: "Massage Therapy",
       text: "Relieve pain, rehabilitate an injury, and reduce stress at the same time with massage therapy.",
       link: "/massage-therapy-san-diego/",
-      image: data.spinalDecompression.childImageSharp.gatsbyImageData,
+      image: data.massageTherapy.childImageSharp.gatsbyImageData,
     },
   ];
 
   const HeadingTag = headingLevel || "h2";
 
   return (
-    <section className={`${className || "mb-24 md:mb-32"}`}>
+    <section className={`${className || "mb-24 lg:mb-32"}`}>
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-14 items-center relative">
-          <div className="md:col-start-1 md:col-span-3 bg-primary-900 rounded-r-6xl h-full w-100vw absolute right-0 z-20 hidden md:block"></div>
-          <div className="md:col-end-13 md:col-span-9 md:pt-8 md:pb-14">
-            <header className="mb-5 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-14 items-center relative">
+          <div className="lg:col-start-1 lg:col-span-3 bg-primary-900 rounded-r-6xl h-full w-100vw absolute right-0 z-20 hidden lg:block"></div>
+          <div className="lg:col-end-13 lg:col-span-9 lg:pt-8 lg:pb-14">
+            <header className="mb-5 lg:mb-16">
               <HeadingTag>Our Specialized Treatments</HeadingTag>
             </header>
             <StyledSlider className="relative">

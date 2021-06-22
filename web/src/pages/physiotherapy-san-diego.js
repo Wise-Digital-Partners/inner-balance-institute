@@ -48,8 +48,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Physiotherapy San Diego | Inner Balance Institute"
+        description="Give your body the attention it needs. Physiotherapy, available at San Diego's Inner Balance Institute, helps you recuperate and maintain an active lifestyle."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

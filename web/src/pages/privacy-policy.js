@@ -254,8 +254,14 @@ const Page = () => {
           </p>
           <p>Inner Balance Institute </p>
           <p>
+            Phone Number: 
+            <br />
+            (619) 543-9999
+          </p>
+          <p>
             Email Address: 
             <br />
+            office@innerbalanceinstitute.com
           </p>
           <p>Effective as of June 21, 2021 </p>
         </div>

@@ -37,8 +37,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Chiropractic Treatments San Diego | Inner Balance"
+        description="Our chiropractic treatments includes helping with auto accident injuries, spinal decompression therapy, and more. Call us if you're suffering from pain today!"
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

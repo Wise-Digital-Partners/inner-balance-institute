@@ -49,11 +49,7 @@ const Page = ({ data }) => {
       answer: (
         <>
           <p>
-            The average motor vehicle accident can age the human spine by ten
-            years. If you’re in an accident, it is of the utmost importance to
-            get to a health care professional and get checked out. Despite
-            popular belief, there is no correlation between vehicle damage and
-            the amount of human injury sustained in a motor vehicle accident.
+          The average motor vehicle accident can age the human spine by 10 years. If you’re in an accident, it is of the utmost importance to get to a health care professional and get checked out. Despite popular belief, there is no correlation between vehicle damage and the amount of human injury sustained in a motor vehicle accident.
           </p>
           <p>
             Often, even when there is little or no damage to the vehicle, there
@@ -100,11 +96,7 @@ const Page = ({ data }) => {
       answer: (
         <>
           <p>
-            Often with an adjustment, you may hear an audible ‘pop’ may be
-            heard. The noise is caused by a change of pressure within the joint.
-            As the adjustment is performed, gas bubbles are released. A joint
-            capsule surrounds most joints, and that capsule contains lubricating
-            fluid, so your joints can glide smoothly.
+          Often with an adjustment, you may hear an audible ‘pop.’ The noise is caused by a change of pressure within the joint. As the adjustment is performed, gas bubbles are released. A joint capsule surrounds most joints, and that capsule contains lubricating fluid, so your joints can glide smoothly.
           </p>
           <p>
             If you don’t hear a ‘pop,’ it doesn’t mean your treatment was
@@ -254,8 +246,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="FAQ | Best San Diego Chiropractor | Inner Balance Institute"
+        description="You have questions. We have answers. Learn more about chiropractic care and treatments in our FAQ."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
@@ -265,7 +257,7 @@ const Page = ({ data }) => {
         backgroundFixed={false}
         imageMaxHeight="max-h-[480px]"
         heading="FAQs"
-        subtext="10 Words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam"
+        subtext="You have questions. We have answers."
         textMaxWidth="max-w-4xl"
         className="bg-primary-100"
       />

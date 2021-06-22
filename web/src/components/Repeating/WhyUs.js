@@ -49,12 +49,12 @@ const WhyUs = ({ className, headingLevel, heading }) => {
     {
       icon: data.quality.publicURL,
       heading: "Quality",
-      text: "Our patients get the best care in a brand-new office and state of the art equipment.",
+      text: "Our patients get the best care in a brand-new office and state-of-the-art equipment.",
     },
     {
       icon: data.integrity.publicURL,
       heading: "Integrity",
-      text: "We never hide behind jargon and you get transparent, reliable care always.",
+      text: "We never hide behind jargon, and you always get transparent, reliable care.",
     },
     {
       icon: data.holistic.publicURL,

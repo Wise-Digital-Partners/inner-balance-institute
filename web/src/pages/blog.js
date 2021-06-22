@@ -56,8 +56,8 @@ const ArchivePage = (props) => {
   return (
     <Layout>
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Chiropractic Blog & Articles | Inner Balance Institute"
+        description="Follow our blog for expert chiropractic advice and discussion of methods from the team at Inner Balance Institute."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

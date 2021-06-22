@@ -4,7 +4,7 @@ import { useOnClickOutside } from "../../hooks";
 import styled from "@emotion/styled";
 import tw from "twin.macro";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-// import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Burger from "./Burger";
 import OffCanvas from "../OffCanvas/OffCanvas";
@@ -34,7 +34,7 @@ const StyledMainNav = styled.nav`
       > a {
         ${({ headerLinkColor }) =>
           headerLinkColor === "white" ? tw`text-white` : tw`text-white`};
-        ${tw`relative font-body text-sm uppercase font-bold no-underline pb-8`}
+        ${tw`font-body text-sm uppercase font-bold no-underline pb-8`}
         &:hover {
           ${tw`text-primary-300`}
         }
@@ -84,11 +84,25 @@ const MainNav = ({
 
   const data = useStaticQuery(graphql`
     {
-      darkLogo: file(relativePath: { eq: "global/logo.svg" }) {
-        publicURL
+      darkLogo: file(relativePath: { eq: "global/logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            width: 188
+            placeholder: NONE
+            quality: 100
+          )
+        }
       }
-      lightLogo: file(relativePath: { eq: "global/logo.svg" }) {
-        publicURL
+      lightLogo: file(relativePath: { eq: "global/logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            width: 188
+            placeholder: NONE
+            quality: 100
+          )
+        }
       }
     }
   `);
@@ -99,17 +113,17 @@ const MainNav = ({
     className = null;
 
   if (headerStyle === "overlap" || headerStyle === "overlap-hero") {
-    initialLogo = data.lightLogo.publicURL;
-    stickyLogo = data.darkLogo.publicURL;
+    initialLogo = data.lightLogo.childImageSharp.gatsbyImageData;
+    stickyLogo = data.darkLogo.childImageSharp.gatsbyImageData;
     className = "absolute";
   } else {
-    initialLogo = data.darkLogo.publicURL;
-    stickyLogo = data.darkLogo.publicURL;
+    initialLogo = data.darkLogo.childImageSharp.gatsbyImageData;
+    stickyLogo = data.darkLogo.childImageSharp.gatsbyImageData;
   }
 
   if (offcanvasOpen) {
-    initialLogo = data.darkLogo.publicURL;
-    stickyLogo = data.darkLogo.publicURL;
+    initialLogo = data.darkLogo.childImageSharp.gatsbyImageData;
+    stickyLogo = data.darkLogo.childImageSharp.gatsbyImageData;
   }
 
   const navigation = {
@@ -167,7 +181,7 @@ const MainNav = ({
     ],
     about: [
       {
-        name: "About",
+        name: "About Us",
         href: "/about/",
       },
       {
@@ -184,12 +198,16 @@ const MainNav = ({
   return (
     <StyledMainNav
       id="main-navigation"
-      className={`py-2.5 lg:py-4 w-full rounded-b-4xl lg:rounded-b-8xl bg-primary-900 transition duration-300 ease-linear ${
+      className={`py-2.5 lg:py-4 w-full bg-primary-900 transition duration-300 ease-linear ${
         headerStyle === "overlap-hero" && "lg:bg-transparent"
       } ${headerStyle === "overlap" && "lg:bg-primary-900"} ${
         headerHasBorder &&
         "border-b border-solid border-white border-opacity-40"
-      } ${offcanvasOpen && "bg-white"} ${className}`}
+      } ${
+        offcanvasOpen
+          ? "bg-white rounded-none"
+          : "rounded-b-4xl lg:rounded-b-8xl"
+      } ${className}`}
       role="navigation"
       aria-label="main-navigation"
       data-fixed={scrolled}
@@ -211,15 +229,15 @@ const MainNav = ({
         <div className="flex-auto flex items-center justify-center lg:justify-start">
           <AniLink fade to="/">
             <div className="logo-initial">
-              <img
-                src={initialLogo}
+              <GatsbyImage
+                image={initialLogo}
                 alt="Inner Balance Institute Logo"
                 className="w-[112px] md:w-[188px]"
               />
             </div>
             <div className="logo-fixed hidden">
-              <img
-                src={stickyLogo}
+              <GatsbyImage
+                image={stickyLogo}
                 alt="Inner Balance Institute Logo"
                 className="w-[112px] md:w-[188px]"
               />
@@ -244,12 +262,13 @@ const MainNav = ({
               <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
                 {navigation.injuries.slice(1).map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
-                    <a
-                      href={item.href}
-                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    <AniLink
+                      fade
+                      to={item.href}
+                      className="relative text-sm uppercase font-bold text-white hover:text-primary-300 no-underline"
                     >
                       {item.name}
-                    </a>
+                    </AniLink>
                   </li>
                 ))}
               </ul>
@@ -269,12 +288,13 @@ const MainNav = ({
               <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
                 {navigation.treatments.slice(1).map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
-                    <a
-                      href={item.href}
-                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    <AniLink
+                      fade
+                      to={item.href}
+                      className="relative text-sm uppercase font-bold text-white hover:text-primary-300 no-underline"
                     >
                       {item.name}
-                    </a>
+                    </AniLink>
                   </li>
                 ))}
               </ul>
@@ -292,14 +312,15 @@ const MainNav = ({
                 About
               </AniLink>
               <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
-                {navigation.about.slice(1).map((item) => (
+                {navigation.about.map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
-                    <a
-                      href={item.href}
-                      className="relative font-body text-lg font-semibold text-white hover:text-primary-300 no-underline"
+                    <AniLink
+                      fade
+                      to={item.href}
+                      className="relative text-sm uppercase font-bold text-white hover:text-primary-300 no-underline"
                     >
                       {item.name}
-                    </a>
+                    </AniLink>
                   </li>
                 ))}
               </ul>
@@ -342,14 +363,15 @@ const MainNav = ({
                   >
                     {navigation.injuries.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <AniLink
+                          fade
+                          to={item.href}
                           className="font-body text-white font-semibold no-underline"
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
                         >
                           {item.name}
-                        </a>
+                        </AniLink>
                       </li>
                     ))}
                   </Accordion>
@@ -358,14 +380,15 @@ const MainNav = ({
                   <Accordion title="Treatments" className="submenu-parent">
                     {navigation.treatments.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <AniLink
+                          fade
+                          to={item.href}
                           className="font-body text-white font-semibold no-underline"
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
                         >
                           {item.name}
-                        </a>
+                        </AniLink>
                       </li>
                     ))}
                   </Accordion>
@@ -374,14 +397,15 @@ const MainNav = ({
                   <Accordion title="About" className="submenu-parent">
                     {navigation.about.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <AniLink
+                          fade
+                          to={item.href}
                           className="font-body text-white font-semibold no-underline"
                           onKeyDown={clickHandler}
                           onClick={clickHandler}
                         >
                           {item.name}
-                        </a>
+                        </AniLink>
                       </li>
                     ))}
                   </Accordion>

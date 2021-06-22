@@ -42,7 +42,7 @@ const Page = ({ data }) => {
     {
       image: data.herniatedBulgingDiscs.childImageSharp.gatsbyImageData,
       heading: "Herniated & Bulging Discs",
-      text: "Also referred to as slipped or ruptured discs, this condition can cause extreme pain. Treat herniated and bulging discs with proper chiropractic technique and care. We help restore core and muscle strength and improve mobility with the right treatment plan.",
+      text: "Also referred to as slipped or ruptured discs, this condition can cause extreme pain. It’s important to treat herniated and bulging discs with proper chiropractic technique and care. We help restore core and muscle strength and improve mobility with the right treatment plan.",
       link: "/herniated-bulging-discs-chiropractor/",
     },
   ];
@@ -50,8 +50,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Injuries We Treat | San Diego Chiropractor | Inner Balance"
+        description="Get natural, non-invasive treatement for injuries due to auto accidents, sciatica, back and shoulder pain, spinal stenosis and herniated and bulging discs."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

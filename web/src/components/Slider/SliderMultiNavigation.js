@@ -11,13 +11,9 @@ import ButtonUnderline from "../Button/ButtonUnderline";
 
 const StyledSlider = styled.div`
   ${tw`relative`}
-  &:before {
-    content: "";
-    ${tw`absolute left-0 w-full h-full bg-white transform -translate-x-full z-10`}
-  }
   .slick-list,
   .slick-slider {
-    ${tw`md:overflow-visible`}
+    ${tw`lg:overflow-visible`}
   }
   .slick-prev,
   .slick-next {
@@ -30,10 +26,10 @@ const StyledSlider = styled.div`
     }
   }
   .slick-dots {
-    ${tw`left-0 top-0 text-left h-0 flex! flex-col z-20`}
+    ${tw`left-0 top-0 text-left h-0 flex! flex-col h-full z-20`}
     transform: translateX(-35%);
     li {
-      ${tw`w-full w-full mb-5`}
+      ${tw`w-60 mb-5`}
       &:before {
         ${tw`text-lg text-white font-bold transition-all duration-300 ease-linear`}
       }
@@ -68,9 +64,10 @@ const StyledSlider = styled.div`
     }
   }
   .slider-nav {
-    ${tw`md:hidden!`}
-    .slick-list {
-      ${tw`pr-24`}
+    ${tw`lg:hidden! pr-32 md:pr-96`}
+    .slick-list,
+    .slick-slider {
+      ${tw`overflow-visible`}
     }
     /* .gatsby-image-wrapper {
       ${tw`transform scale-75 transition-all duration-300 ease-linear`}
@@ -126,7 +123,7 @@ export default class Slider extends Component {
       ref: (slider) => (this.slider2 = slider),
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 1023,
           settings: {
             dots: false,
             fade: true,
@@ -144,17 +141,21 @@ export default class Slider extends Component {
 
     return (
       <StyledSlider>
-        <Slick className="slider-nav mb-8" {...imageSliderSettings}>
+        <Slick className="slider-nav mb-4 -mx-4" {...imageSliderSettings}>
           {this.props.slides.map((slide, i) => {
             return (
               <div key={i}>
-                <GatsbyImage image={slide.image} alt={slide.heading} />
+                <GatsbyImage
+                  image={slide.image}
+                  alt={slide.heading}
+                  className="mr-2.5"
+                />
               </div>
             );
           })}
         </Slick>
 
-        {/* <div className="flex md:hidden items-center justify-end relative -top-7 -mb-4">
+        {/* <div className="flex lg:hidden items-center justify-end relative -top-7 -mb-4">
               <div className="text-sm font-heading font-bold tracking-wider">
                 <span className="text-black">
                   {"0"}
@@ -168,15 +169,15 @@ export default class Slider extends Component {
           {this.props.slides.map((slide, i) => {
             return (
               <div className="" key={i}>
-                <div className="grid md:grid-cols-12 gap-y-4">
-                  <div className="md:col-start-1 md:col-span-5 hidden md:block">
+                <div className="grid lg:grid-cols-12 gap-y-4">
+                  <div className="lg:col-start-1 lg:col-span-5 hidden lg:block">
                     <GatsbyImage image={slide.image} alt={slide.heading} />
                   </div>
-                  <div className="md:pt-4 lg:pt-7 md:px-10 lg:px-20 md:col-end-13 md:col-span-7">
-                    <h3 className="text-mobile-3xl md:text-3xl normal-case md:uppercase">
+                  <div className="lg:pt-4 xl:pt-7 lg:px-10 xl:px-20 lg:col-end-13 lg:col-span-7">
+                    <h3 className="text-mobile-3xl lg:text-3xl normal-case lg:uppercase">
                       {slide.heading}
                     </h3>
-                    <p className="text-sm md:text-lg">{slide.text}</p>
+                    <p className="text-sm lg:text-lg">{slide.text}</p>
                     <ButtonUnderline href={slide.link} text="Learn More" />
                   </div>
                 </div>
@@ -185,13 +186,16 @@ export default class Slider extends Component {
           })}
         </Slick>
 
-        <div className="flex justify-end items-center space-x-2 md:absolute right-0 bottom-0 md:mr-10 lg:mr-20 mt-8 md:mt-0">
+        <div className="flex justify-end items-center space-x-2 lg:absolute right-0 bottom-0 lg:mr-10 xl:mr-20 mt-8 lg:mt-0">
           <button
             onClick={this.prevSlide}
             className="focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border border-primary-600 bg-white hover:bg-primary-600 text-primary-600 hover:text-white"
           >
             <i className="fal fa-arrow-left text-2xl focus:no-underline"></i>
           </button>
+
+          {this.state.currentSlide}
+          {this.state.nav1.slideCount}
 
           {/* <div className="text-sm font-heading font-bold tracking-wider mx-8">
                 <span className="text-black">

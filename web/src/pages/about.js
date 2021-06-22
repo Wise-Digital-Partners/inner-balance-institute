@@ -108,8 +108,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="About Inner Balance Institute | San Diego Chiropractor"
+        description="At Inner Balance Institute, we provide natural, non-invasive therapies and functional exercise as an alternative to surgery and drug-related approaches."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />

@@ -46,8 +46,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Car Accident Chiropractor San Diego | Inner Balance"
+        description="Need help recovering from a car accident injury, such as whiplash? We provide non-invasive treatment that promotes the body’s potential to heal itself."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
@@ -166,9 +166,7 @@ const Page = ({ data }) => {
                 <div>
                   <h3 className="text-mobile-3xl md:text-3xl">Schedule</h3>
                   <p className="md:text-lg mb-0">
-                    Give us a call or fill out our online form to schedule an
-                    initial consultation. Once confirmed, we’ll send your intake
-                    forms prior to your appointment for faster check-in.
+                    Give us a call or fill out our online form to schedule an initial consultation. Once your appointment is confirmed, we’ll send you your intake forms so you can fill them out ahead of time for faster check-in.
                   </p>
                 </div>
               </div>
@@ -178,8 +176,7 @@ const Page = ({ data }) => {
                 <div>
                   <h3 className="text-mobile-3xl md:text-3xl">Show Up</h3>
                   <p className="md:text-lg mb-0">
-                    Arrive for your exam with our board certified Doctor of
-                    Chiropractic. This may include digital x-rays, surface
+                    Arrive for your exam with our board-certified doctor of chiropractic. This may include digital x-rays, surface
                     electromyography and thermography, functional posture
                     assessment, and neurological and orthopedic tests.
                   </p>
@@ -193,9 +190,7 @@ const Page = ({ data }) => {
                     Treatment Plan
                   </h3>
                   <p className="md:text-lg mb-0">
-                    We set goals and expectations for your care plan. We provide
-                    patients the resources you need to treat or prevent injury,
-                    get aligned, and improve your quality of life!
+                    We set goals and expectations for your care plan. We provide patients the resources they need to treat or prevent injury, get aligned, and improve their quality of life!
                   </p>
                 </div>
               </div>

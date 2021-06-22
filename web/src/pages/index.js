@@ -64,8 +64,8 @@ const Page = ({ data }) => {
   return (
     <Layout headerStyle="overlap-hero" headerLinkColor="white">
       <SearchEngineOptimization
-        title=""
-        description=""
+        title="Best Chiropractor San Diego | Inner Balance Institute"
+        description="Choose Inner Balance Institute for treatment from a top chiropractor voted best in San Diego. We've been serving the San Diego community since 1997."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
