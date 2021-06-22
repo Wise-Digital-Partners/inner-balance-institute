@@ -139,6 +139,8 @@ export default class Slider extends Component {
       ref: (slider) => (this.slider1 = slider),
     };
 
+    const slides = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+
     return (
       <StyledSlider>
         <Slick className="slider-nav mb-4 -mx-4" {...imageSliderSettings}>
@@ -189,7 +191,11 @@ export default class Slider extends Component {
         <div className="flex justify-end items-center space-x-2 lg:absolute right-0 bottom-0 lg:mr-10 xl:mr-20 mt-8 lg:mt-0">
           <button
             onClick={this.prevSlide}
-            className="focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border border-primary-600 bg-white hover:bg-primary-600 text-primary-600 hover:text-white"
+            className={`focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border  bg-white hover:bg-primary-600 hover:text-white ${
+              this.state.currentSlide + 1 === 1
+                ? "text-gray-300 border-gray-300 pointer-events-none"
+                : "text-primary-600 border-primary-600"
+            }`}
           >
             <i className="fal fa-arrow-left text-2xl focus:no-underline"></i>
           </button>
@@ -205,7 +211,11 @@ export default class Slider extends Component {
 
           <button
             onClick={this.nextSlide}
-            className="focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border border-primary-600 bg-white hover:bg-primary-600 text-primary-600 hover:text-white"
+            className={`focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border  bg-white hover:bg-primary-600 hover:text-white ${
+              this.state.currentSlide + 1 === slides.length
+                ? "text-gray-300 border-gray-300 pointer-events-none"
+                : "text-primary-600 border-primary-600"
+            }`}
           >
             <i className="fal fa-arrow-right text-2xl focus:no-underline"></i>
           </button>
