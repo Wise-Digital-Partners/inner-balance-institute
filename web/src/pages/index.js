@@ -50,7 +50,7 @@ const Page = ({ data }) => {
     {
       image: data.spinalStenosis.childImageSharp.gatsbyImageData,
       heading: "Spinal Stenosis",
-      text: "Find relief from spinal stenosis with a safe, natural, and effective approach.",
+      text: "Find relief from spinal stenosis with non-surgical, highly-effective spinal decompression therapy.",
       link: "/spinal-stenosis-chiropractor/",
     },
     {
