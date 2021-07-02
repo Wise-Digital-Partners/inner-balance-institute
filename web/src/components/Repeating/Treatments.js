@@ -19,7 +19,7 @@ const Treatments = ({ className, headingLevel }) => {
         }
       }
       massageTherapy: file(
-        relativePath: { eq: "repeating/Treatments/Massage therapy.jpg" }
+        relativePath: { eq: "repeating/Treatments/Massage Therapy-new.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)

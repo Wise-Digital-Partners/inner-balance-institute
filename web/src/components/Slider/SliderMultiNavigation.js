@@ -26,10 +26,10 @@ const StyledSlider = styled.div`
     }
   }
   .slick-dots {
-    ${tw`left-0 top-0 text-left h-0 flex! flex-col h-full z-20`}
+    ${tw`left-0 top-0 text-left h-0 flex! flex-col h-full z-20 w-60`}
     transform: translateX(-35%);
     li {
-      ${tw`w-60 mb-5`}
+      ${tw`w-full mb-5`}
       &:before {
         ${tw`text-lg text-white font-bold transition-all duration-300 ease-linear`}
       }

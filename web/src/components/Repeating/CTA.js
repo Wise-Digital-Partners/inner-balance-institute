@@ -35,7 +35,7 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
             </HeadingTag>
             <p className="text-white mb-7 text-lg md:max-w-[418px]">
               {subtext ||
-                "Ready to relieve pain and improve your quality of life? Our San Diego chiropractors are here to help. Schedule your appointment today!"}
+                "Get to the root cause of your problems and stop the pain naturally. Schedule your appointment today!"}
             </p>
             <div className="grid md:flex flex-wrap md:flex-nowrap space-y-5 md:space-y-0 md:space-x-6">
               <ButtonSolid

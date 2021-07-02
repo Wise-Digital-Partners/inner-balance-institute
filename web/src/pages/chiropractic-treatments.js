@@ -9,25 +9,25 @@ import ButtonUnderline from "../components/Button/ButtonUnderline";
 const Page = ({ data }) => {
   const services = [
     {
-      image: data.autoAccidents.childImageSharp.gatsbyImageData,
+      image: data.chiropracticCare.childImageSharp.gatsbyImageData,
       heading: "Chiropractic Care",
       text: "We offer one of the most complete and comprehensive initial examinations available. Our goal is to discover the underlying root cause of your suffering plus customize effective treatment solutions for lasting and permanent relief.",
       link: "/chiropractic-care-san-diego/",
     },
     {
-      image: data.sciatica.childImageSharp.gatsbyImageData,
+      image: data.spinalDecompression.childImageSharp.gatsbyImageData,
       heading: "Spinal Decompression",
       text: "Consider our newest, non-invasive and non-surgical spinal treatment for your back pain! No surgery means more savings, less medical bills and a quick recovery time. At Inner Balance Institute, we have the latest spinal decompression technology available.",
       link: "/spinal-decompression-therapy-san-diego/",
     },
     {
-      image: data.backPain.childImageSharp.gatsbyImageData,
+      image: data.physiotherapy.childImageSharp.gatsbyImageData,
       heading: "Physiotherapy",
       text: "We provide exceptional guidance in developing a tailored program for your alignment. Together, we will give your body the attention it needs to recuperate from your injuries, so you can continue to maintain an active lifestyle.",
       link: "/physiotherapy-san-diego/",
     },
     {
-      image: data.shoulderPain.childImageSharp.gatsbyImageData,
+      image: data.massageTherapy.childImageSharp.gatsbyImageData,
       heading: "Massage Therapy",
       text: "Relieve pain, rehabilitate injury, and reduce stress at the same time with massage therapy. Whether you need to recover or relieve muscle tension, we can help. Schedule massage therapy with our board certified doctor of chiropractic and promote overall wellness.",
       link: "/massage-therapy-san-diego/",
@@ -94,7 +94,7 @@ export const query = graphql`
     ) {
       publicURL
     }
-    autoAccidents: file(
+    chiropracticCare: file(
       relativePath: { eq: "treatments/1.0 treatment hub chiro.jpg" }
     ) {
       childImageSharp {
@@ -106,7 +106,7 @@ export const query = graphql`
         )
       }
     }
-    sciatica: file(
+    spinalDecompression: file(
       relativePath: { eq: "treatments/2.0 treatment hub spinal .jpg" }
     ) {
       childImageSharp {
@@ -118,7 +118,7 @@ export const query = graphql`
         )
       }
     }
-    backPain: file(
+    physiotherapy: file(
       relativePath: { eq: "treatments/3.0 treatment hub physiotherapy.jpg" }
     ) {
       childImageSharp {
@@ -130,7 +130,7 @@ export const query = graphql`
         )
       }
     }
-    shoulderPain: file(
+    massageTherapy: file(
       relativePath: { eq: "treatments/4.0 treatment hub massage.jpg" }
     ) {
       childImageSharp {

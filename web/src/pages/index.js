@@ -56,7 +56,7 @@ const Page = ({ data }) => {
     {
       image: data.herniatedBulgingDiscs.childImageSharp.gatsbyImageData,
       heading: "Herniated & Bulging Discs",
-      text: "Treat herniated and bulging discs with proper chiropractic technique and care.",
+      text: "Treat herniated and bulging discs with safe and natural spinal decompression.",
       link: "/herniated-bulging-discs-chiropractor/",
     },
   ];
@@ -165,9 +165,9 @@ const Page = ({ data }) => {
                 At Inner Balance Institute, we’re partners on your journey back
                 to wellness. Our goal is to relieve your pain, stress, and
                 worries. Our approach is to educate you every step of the way
-                through your chiropractic care, specialized exercise tailored to
-                your needs, and nutritional guidance to improve vitality and
-                energy.
+                through your chiropractic care with customized core stretching
+                and strengthening exercises designed for your individual needs
+                and nutritional guidance to improve vitality and energy.
               </p>
               <ButtonUnderline href="/about/" text="Learn More" />
             </div>
@@ -208,7 +208,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    intro: file(relativePath: { eq: "home/2.0 Home - collage.png" }) {
+    intro: file(relativePath: { eq: "home/2.0 Home - collage - new.png" }) {
       childImageSharp {
         gatsbyImageData(
           layout: CONSTRAINED
@@ -230,7 +230,7 @@ export const query = graphql`
         )
       }
     }
-    sciatica: file(relativePath: { eq: "home/3.1 Home - Sciatica.jpg" }) {
+    sciatica: file(relativePath: { eq: "home/3.2 Home - Sciatica.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           layout: CONSTRAINED
@@ -286,7 +286,7 @@ export const query = graphql`
         )
       }
     }
-    partners: file(relativePath: { eq: "home/4.0 Home - Wellnes.png" }) {
+    partners: file(relativePath: { eq: "home/4.0 Home - Wellness.png" }) {
       childImageSharp {
         gatsbyImageData(
           layout: CONSTRAINED

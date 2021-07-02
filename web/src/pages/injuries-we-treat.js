@@ -12,7 +12,7 @@ const Page = ({ data }) => {
     {
       image: data.autoAccidents.childImageSharp.gatsbyImageData,
       heading: "Auto Accidents",
-      text: "Let our experts in treatment and insurance processing guide you back to wellness. Inner Balance Institute is trained to work with insurance companies and attorneys. Our treatment is smooth, interruption-free, and seamless so that you can concentrate on your recovery!      ",
+      text: "Let our experts in treatment and insurance processing guide you back to wellness. We take most patients on a lien basis. This means there is no out-of-pocket expense to you. Our treatment is smooth, interruption-free, and seamless so that you can concentrate on your recovery!",
       link: "/car-accident-chiropractor/",
     },
     {
@@ -122,7 +122,7 @@ export const query = graphql`
       }
     }
     sciatica: file(
-      relativePath: { eq: "injuries/2.0 Inj - hub - sciatica.jpg" }
+      relativePath: { eq: "injuries/2.0 Inj - hub - sciatica new.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(

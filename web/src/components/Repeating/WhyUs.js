@@ -49,27 +49,27 @@ const WhyUs = ({ className, headingLevel, heading }) => {
     {
       icon: data.quality.publicURL,
       heading: "Quality",
-      text: "Our patients get the best care in a brand-new office and state-of-the-art equipment.",
+      text: "Our patients get the best care in our brand-new office and state-of-the-art equipment.",
     },
     {
       icon: data.integrity.publicURL,
       heading: "Integrity",
-      text: "We never hide behind jargon, and you always get transparent, reliable care.",
+      text: "We stay on top of the latest research and development to provide the best care possible to our patients.",
     },
     {
       icon: data.holistic.publicURL,
       heading: "Holistic",
-      text: "We don’t just align and relieve pain. We teach you to listen to your body.",
+      text: "We're committed to delivering the most effective chiropractic care to improve your overall health and well-being naturally.",
     },
     {
       icon: data.customized.publicURL,
       heading: "Customized",
-      text: "Your care plan is suited to your body’s specific needs for maximum relief and improvement.",
+      text: "We create customized treatment plans designed for the individual needs of your body.",
     },
     {
       icon: data.organized.publicURL,
       heading: "Organized",
-      text: "We keep it smooth from your initial consultation to your long-term chiropractic care.",
+      text: "We utilize digital communication and technologies to keep your experience as smooth and efficient as possible.",
     },
   ];
 
