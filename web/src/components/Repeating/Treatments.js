@@ -1,12 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 // import tw from "twin.macro";
 
 import Slider from "../Slider/SliderMultiNavigation";
-
-const StyledSlider = styled.div``;
 
 const Treatments = ({ className, headingLevel }) => {
   const data = useStaticQuery(graphql`
@@ -74,17 +72,7 @@ const Treatments = ({ className, headingLevel }) => {
   return (
     <section className={`${className || "mb-24 lg:mb-32"}`}>
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-14 items-center relative">
-          <div className="lg:col-start-1 lg:col-span-3 bg-primary-900 rounded-r-6xl h-full w-100vw absolute right-0 z-20 hidden lg:block"></div>
-          <div className="lg:col-end-13 lg:col-span-9 lg:pt-8 lg:pb-14">
-            <header className="mb-5 lg:mb-16">
-              <HeadingTag>Our Specialized Treatments</HeadingTag>
-            </header>
-            <StyledSlider className="relative">
-              <Slider slides={treatments} />
-            </StyledSlider>
-          </div>
-        </div>
+        <Slider slides={treatments} headingTag={HeadingTag} />
       </div>
     </section>
   );

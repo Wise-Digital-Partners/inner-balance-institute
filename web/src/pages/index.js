@@ -130,12 +130,16 @@ const Page = ({ data }) => {
             </p>
           </header>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-10 sm:gap-y-14 sm:gap-x-6 md:gap-x-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-y-14 md:gap-x-6 lg:gap-x-10">
             {services.map((service, i) => {
               return (
                 <div className="group relative" key={i}>
                   <div className="relative mb-5">
-                    <GatsbyImage image={service.image} alt={service.heading} />
+                    <GatsbyImage
+                      image={service.image}
+                      alt={service.heading}
+                      className="w-full"
+                    />
                     <div className="absolute w-full h-full left-0 top-0 bg-primary-300/50 opacity-0 md:group-hover:opacity-100 transition-all duration-300 ease-linear"></div>
                   </div>
                   <h3 className="text-mobile-3xl md:text-3xl mb-4">
