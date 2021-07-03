@@ -49,7 +49,7 @@ const Treatments = ({ className, headingLevel }) => {
     },
     {
       heading: "Spinal Decompression",
-      text: "Consider our newest, non-invasive, and non-surgical spinal treatment for your back pain!",
+      text: "Consider our newest, non-invasive and non-surgical spinal treatment for your back pain!",
       link: "/spinal-decompression-therapy-san-diego/",
       image: data.spinalDecompression.childImageSharp.gatsbyImageData,
     },
