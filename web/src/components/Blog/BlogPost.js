@@ -14,6 +14,9 @@ const StyledContent = styled.div`
   li {
     ${tw`text-base md:text-xl`}
   }
+  ul {
+    ${tw`list-disc pl-6 mb-8`}
+  }
 `;
 
 function BlogPost(props) {

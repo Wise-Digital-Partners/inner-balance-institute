@@ -14,7 +14,7 @@ function BlogPostPreviewGrid(props) {
             <GatsbyImage
               image={props.mainImage.asset.gatsbyImageData}
               alt={props.mainImage.alt}
-              className="block transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
+              className="h-[310px] transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
             />
           )}
         </div>
@@ -31,7 +31,7 @@ function BlogPostPreviewGrid(props) {
               ))}
             </>
           )}
-          <p className="font-heading text-xl font-bold text-gray-600 mb-0">
+          <p className="font-heading text-xl md:text-3xl font-bold uppercase text-gray-900 mb-0">
             {props.title}
           </p>
           {/* {props._rawExcerpt && (

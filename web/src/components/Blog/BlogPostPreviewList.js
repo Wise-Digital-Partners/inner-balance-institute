@@ -14,12 +14,12 @@ function BlogPostPreviewGrid(props) {
         href={getBlogUrl(props.publishedAt, props.slug.current)}
         className="no-underline"
       >
-        <div className="overflow-hidden mb-6">
+        <div className="rounded-4xl overflow-hidden mb-5">
           {props.mainImage && props.mainImage.asset && (
             <GatsbyImage
               image={props.mainImage.asset.gatsbyImageData}
               alt={props.mainImage.alt}
-              className="transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
+              className="h-[310px] transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
             />
           )}
         </div>
@@ -28,7 +28,7 @@ function BlogPostPreviewGrid(props) {
             <>
               {props.categories.slice(0, 1).map((category) => (
                 <div
-                  className="font-body tracking-wider leading-5 mb-2 text-gray-400"
+                  className="font-bold text-sm tracking-[0.03em] text-gray-600/50 uppercase mb-1.5"
                   key={category._id}
                 >
                   {category.title}
@@ -36,7 +36,7 @@ function BlogPostPreviewGrid(props) {
               ))}
             </>
           )}
-          <p className="font-heading text-xl font-bold text-gray-600 mb-0">
+          <p className="font-heading text-xl md:text-3xl font-bold uppercase text-gray-900 mb-0">
             {props.title}
           </p>
 
