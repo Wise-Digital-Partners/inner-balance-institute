@@ -14,7 +14,7 @@ import Accordion from "./Accordion";
 
 const StyledMainNav = styled.nav`
   &[data-fixed="true"] {
-    ${tw`fixed top-0 left-0 w-full bg-primary-900 z-50`}
+    ${tw`fixed top-0 left-0 w-full bg-primary-800 z-50`}
     #navigation-desktop {
       > li {
         > a {
@@ -198,9 +198,9 @@ const MainNav = ({
   return (
     <StyledMainNav
       id="main-navigation"
-      className={`py-2.5 lg:py-4 w-full bg-primary-900 transition duration-300 ease-linear ${
+      className={`py-2.5 lg:py-4 w-full bg-primary-800 transition duration-300 ease-linear ${
         headerStyle === "overlap-hero" && "lg:bg-transparent"
-      } ${headerStyle === "overlap" && "lg:bg-primary-900"} ${
+      } ${headerStyle === "overlap" && "lg:bg-primary-800"} ${
         headerHasBorder &&
         "border-b border-solid border-white border-opacity-40"
       } ${
@@ -259,7 +259,7 @@ const MainNav = ({
               >
                 Injuries We Treat
               </AniLink>
-              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-800 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
                 {navigation.injuries.slice(1).map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink
@@ -285,7 +285,7 @@ const MainNav = ({
               >
                 Treatments
               </AniLink>
-              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-800 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
                 {navigation.treatments.slice(1).map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink
@@ -311,7 +311,7 @@ const MainNav = ({
               >
                 About
               </AniLink>
-              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-900 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
+              <ul className="absolute flex flex-col space-y-0.5 w-auto bg-primary-800 shadow-3xl rounded-3xl pt-4 pb-8 px-6 opacity-0 invisible z-10 transform -translate-x-10 translate-y-8 transition-all duration-300 ease-linear group-hover:opacity-100 group-hover:visible group-hover:translate-y-4">
                 {navigation.about.map((item) => (
                   <li key={item.name} className="whitespace-nowrap">
                     <AniLink

@@ -102,7 +102,7 @@ const ReviewCards = ({ gridLayout }) => {
       {reviews.map((review, i) => {
         return (
           <div
-            className={`w-full bg-white border border-solid border-primary-600 rounded-lg mb-8 md:mb-10 p-6 md:pt-8 md:px-7 ${gridItemClass}`}
+            className={`w-full bg-white border border-solid border-primary-700 rounded-lg mb-8 md:mb-10 p-6 md:pt-8 md:px-7 ${gridItemClass}`}
             key={i}
           >
             <div className="flex justify-between items-center mb-6">

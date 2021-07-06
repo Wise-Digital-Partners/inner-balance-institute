@@ -35,11 +35,11 @@ const StyledModal = styled.div`
       will-change: transform;
     }
     .close {
-      ${tw`absolute top-0 right-0 left-auto transform translate-x-1/2	md:translate-x-0 mb-0 mr-8 md:mr-10 mt-4 md:mt-10 text-black hover:text-primary-600 text-2xl cursor-pointer transition-all duration-300 ease-linear z-10`}
+      ${tw`absolute top-0 right-0 left-auto transform translate-x-1/2	md:translate-x-0 mb-0 mr-8 md:mr-10 mt-4 md:mt-10 text-black hover:text-primary-700 text-2xl cursor-pointer transition-all duration-300 ease-linear z-10`}
       &:hover,
             &:focus,
             &:active {
-        ${tw`text-primary-600`}
+        ${tw`text-primary-700`}
       }
     }
   }
@@ -118,7 +118,7 @@ const Modal = ({ slideIndex, children }) => {
             </div>
           </div>
           {/* <i className="close fal fa-times" data-modal-close></i> */}
-          {/* <div className="md:hidden bg-primary-600 h-20 fixed bottom-0 w-full"></div>               */}
+          {/* <div className="md:hidden bg-primary-700 h-20 fixed bottom-0 w-full"></div>               */}
         </div>
       </StyledModal>
     </div>

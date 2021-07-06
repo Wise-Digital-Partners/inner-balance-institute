@@ -101,7 +101,7 @@ const Modal = ({ vidRef }) => {
           >
             <div className="flex justify-end items-center py-4 md:py-6 px-6">
               <i
-                className="close fal fa-times text-3xl md:text-4xl text-white hover:text-primary-600 cursor-pointer transition-all duration-300 ease-linear"
+                className="close fal fa-times text-3xl md:text-4xl text-white hover:text-primary-700 cursor-pointer transition-all duration-300 ease-linear"
                 data-modal-close
                 onKeyDown={handlePauseVideo}
                 onClick={handlePauseVideo}

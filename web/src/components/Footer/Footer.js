@@ -4,6 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import ModalContact from "../Modal/ModalContact";
+import ModalPromo from "../Modal/ModalPromo";
 
 const Footer = () => {
   const getYear = () => {
@@ -203,7 +204,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="tel:619-543-9999"
-                        className="text-sm no-underline font-semibold text-primary-600 md:text-white hover:text-primary-300"
+                        className="text-sm no-underline font-semibold text-primary-700 md:text-white hover:text-primary-300"
                       >
                         (619) 543-9999
                       </a>
@@ -222,7 +223,7 @@ const Footer = () => {
                     href="https://goo.gl/maps/nTTAXtA4BzxvFiNQ8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm no-underline font-semibold text-primary-600 md:text-white hover:text-primary-300"
+                    className="text-sm no-underline font-semibold text-primary-700 md:text-white hover:text-primary-300"
                   >
                     <address className="not-italic">
                       1764 San Diego Ave <br />
@@ -265,7 +266,7 @@ const Footer = () => {
                         href="https://www.doterra.com/US/en/site/ibi"
                         target="_blank"
                         rel="noreferrer"
-                        className="font-body font-bold tracking-wide uppercase text-sm font-semibold text-primary-600 md:text-white hover:text-primary-300"
+                        className="font-body font-bold tracking-wide uppercase text-sm font-semibold text-primary-700 md:text-white hover:text-primary-300"
                       >
                         doTerra
                       </a>
@@ -275,7 +276,7 @@ const Footer = () => {
                         href="https://ibi.metagenics.com/"
                         target="_blank"
                         rel="noreferrer"
-                        className="font-body font-bold tracking-wide uppercase text-sm font-semibold text-primary-600 md:text-white hover:text-primary-300"
+                        className="font-body font-bold tracking-wide uppercase text-sm font-semibold text-primary-700 md:text-white hover:text-primary-300"
                       >
                         Metagenics
                       </a>
@@ -350,6 +351,7 @@ const Footer = () => {
       </footer>
 
       <ModalContact />
+      <ModalPromo />
     </>
   );
 };

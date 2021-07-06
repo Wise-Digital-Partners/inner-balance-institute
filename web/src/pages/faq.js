@@ -49,7 +49,11 @@ const Page = ({ data }) => {
       answer: (
         <>
           <p>
-          The average motor vehicle accident can age the human spine by 10 years. If you’re in an accident, it is of the utmost importance to get to a health care professional and get checked out. Despite popular belief, there is no correlation between vehicle damage and the amount of human injury sustained in a motor vehicle accident.
+            The average motor vehicle accident can age the human spine by 10
+            years. If you’re in an accident, it is of the utmost importance to
+            get to a health care professional and get checked out. Despite
+            popular belief, there is no correlation between vehicle damage and
+            the amount of human injury sustained in a motor vehicle accident.
           </p>
           <p>
             Often, even when there is little or no damage to the vehicle, there
@@ -96,7 +100,11 @@ const Page = ({ data }) => {
       answer: (
         <>
           <p>
-          Often with an adjustment, you may hear an audible ‘pop.’ The noise is caused by a change of pressure within the joint. As the adjustment is performed, gas bubbles are released. A joint capsule surrounds most joints, and that capsule contains lubricating fluid, so your joints can glide smoothly.
+            Often with an adjustment, you may hear an audible ‘pop.’ The noise
+            is caused by a change of pressure within the joint. As the
+            adjustment is performed, gas bubbles are released. A joint capsule
+            surrounds most joints, and that capsule contains lubricating fluid,
+            so your joints can glide smoothly.
           </p>
           <p>
             If you don’t hear a ‘pop,’ it doesn’t mean your treatment was
@@ -281,7 +289,7 @@ const Page = ({ data }) => {
                           const icon = state.expanded ? "fa-minus" : "fa-plus";
                           return (
                             <i
-                              className={`fal ${icon} text-xl text-primary-600 mr-5`}
+                              className={`fal ${icon} text-xl text-primary-700 mr-5`}
                             ></i>
                           );
                         }}

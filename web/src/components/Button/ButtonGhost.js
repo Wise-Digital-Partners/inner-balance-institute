@@ -16,9 +16,9 @@ const Button = ({
   text,
 }) => (
   <StyledButton
-    className={`font-body font-semibold text-primary-600 hover:text-white bg-white hover:bg-primary-600 border border-solid border-primary-600 px-4 py-2 h-[52px] min-w-[214px] rounded inline-flex items-center justify-center text-center no-underline focus:outline-none transition-colors duration-300 ease-in-out ${
+    className={`font-body font-semibold text-primary-700 hover:text-white bg-white hover:bg-primary-600 border border-solid border-primary-700 px-4 py-2 h-[52px] min-w-[214px] rounded inline-flex items-center justify-center text-center no-underline focus:outline-none transition-colors duration-300 ease-in-out ${
       darkmode &&
-      "text-white border-white hover:bg-white hover:text-primary-600"
+      "text-white border-white hover:bg-white hover:text-primary-700"
     } ${className || ""}`}
     href={href}
     target={target}

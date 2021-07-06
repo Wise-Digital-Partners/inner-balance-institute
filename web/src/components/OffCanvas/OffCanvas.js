@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import tw from "twin.macro";
 
 const StyledOffCanvas = styled.nav`
-  ${tw`bg-primary-900 fixed top-0 left-0 w-full h-screen pt-16 pb-40 px-10 z-10 overflow-y-scroll transition-transform duration-500 ease-in-out`}
+  ${tw`bg-primary-800 fixed top-0 left-0 w-full h-screen pt-16 pb-40 px-10 z-10 overflow-y-scroll transition-transform duration-500 ease-in-out`}
   transform: ${({ offcanvasOpen }) =>
     offcanvasOpen ? "translateX(0%)" : "translateX(-100%)"};
 `;

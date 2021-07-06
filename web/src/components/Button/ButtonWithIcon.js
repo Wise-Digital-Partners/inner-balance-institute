@@ -15,7 +15,7 @@ const Button = ({
 }) => (
   <a
     className={`group relative font-body font-semibold inline-flex items-center justify-center text-center no-underline focus:outline-none transition-colors duration-300 ease-linear ${
-      darkmode ? `text-white` : `text-primary-600 hover:text-primary-600`
+      darkmode ? `text-white` : `text-primary-700 hover:text-primary-700`
     } ${className}`}
     href={href}
     target={target}

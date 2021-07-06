@@ -39,7 +39,7 @@ const StyledModal = styled.div`
       &:hover,
             &:focus,
             &:active {
-        ${tw`text-primary-600`}
+        ${tw`text-primary-700`}
       }
       @media (max-width: 767px) {
         ${tw`mt-12`}

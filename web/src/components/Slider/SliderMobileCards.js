@@ -31,10 +31,10 @@ const StyledSlider = styled.div`
       ${tw`hidden`}
     }
     i {
-      ${tw`text-primary-600 text-sm transition-all duration-300 ease-linear`}
+      ${tw`text-primary-700 text-sm transition-all duration-300 ease-linear`}
     }
     &:hover {
-      ${tw`bg-primary-600 border-primary-600`}
+      ${tw`bg-primary-700 border-primary-700`}
       i {
         ${tw`text-white`}
       }
@@ -48,7 +48,7 @@ const StyledSlider = styled.div`
     li {
       ${tw`ml-0 mr-3 my-0 w-2 h-2`}
       button {
-        ${tw`bg-primary-600 rounded-full opacity-25 w-2 h-2 p-0 transition-all duration-300 ease-linear`}
+        ${tw`bg-primary-700 rounded-full opacity-25 w-2 h-2 p-0 transition-all duration-300 ease-linear`}
         &:before {
           ${tw`hidden`}
         }

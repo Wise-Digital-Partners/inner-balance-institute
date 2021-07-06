@@ -8,17 +8,17 @@ import tw from "twin.macro";
 import Slider from "../Slider/SliderStandard";
 
 const StyledSlider = styled.div`
-.slick-track {
-  ${tw`flex items-center`}
-}
+  .slick-track {
+    ${tw`flex items-center`}
+  }
   .slick-list {
     ${tw`overflow-visible`}
   }
   .slick-prev,
   .slick-next {
-    ${tw`h-12 w-12 bg-white hover:bg-primary-600 border border-solid border-primary-600 rounded-full`}
+    ${tw`h-12 w-12 bg-white hover:bg-primary-600 border border-solid border-primary-700 rounded-full`}
     i {
-      ${tw`text-2xl text-primary-600`}
+      ${tw`text-2xl text-primary-700`}
     }
     &:hover {
       i {
@@ -67,16 +67,12 @@ const Testimonial = ({ className, headingLevel }) => {
           gatsbyImageData(layout: FIXED, width: 125, quality: 100)
         }
       }
-      google: file(
-        relativePath: { eq: "reviews/google.png" }
-      ) {
+      google: file(relativePath: { eq: "reviews/google.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FIXED, width: 110, quality: 100)
         }
       }
-      yelp: file(
-        relativePath: { eq: "reviews/yelp.png" }
-      ) {
+      yelp: file(relativePath: { eq: "reviews/yelp.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FIXED, width: 84, quality: 100)
         }

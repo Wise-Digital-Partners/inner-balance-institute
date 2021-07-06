@@ -32,7 +32,7 @@ const StyledForm = styled.div`
   [type="week"],
   select,
   textarea {
-    ${tw`text-sm w-full bg-gray-50 px-4 py-2.5 border border-solid border-gray-200 rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-primary-600`}
+    ${tw`text-sm w-full bg-gray-50 px-4 py-2.5 border border-solid border-gray-200 rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-primary-700`}
   }
   select {
     &:invalid {
