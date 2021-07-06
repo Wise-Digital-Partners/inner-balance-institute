@@ -14,7 +14,7 @@ function BlogPostPreviewGrid(props) {
             <GatsbyImage
               image={props.mainImage.asset.gatsbyImageData}
               alt={props.mainImage.alt}
-              className="h-[310px] transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
+              className="h-[310px] w-full transform scale-100 md:group-hover:scale-110 transition-all duration-500 ease-linear"
             />
           )}
         </div>
