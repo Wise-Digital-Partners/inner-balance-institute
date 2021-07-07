@@ -158,6 +158,11 @@ const Page = ({ data }) => {
               alt="Award"
               className="w-[122px]"
             />
+            <GatsbyImage
+              image={data.award4.childImageSharp.gatsbyImageData}
+              alt="Award"
+              className="w-[130px]"
+            />
           </div>
         </div>
       </section>
@@ -513,6 +518,11 @@ export const query = graphql`
       }
     }
     award3: file(relativePath: { eq: "about/3.3 Award 3.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    award4: file(relativePath: { eq: "about/uptown-news-downtown.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

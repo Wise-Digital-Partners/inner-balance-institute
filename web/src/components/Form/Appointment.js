@@ -69,7 +69,7 @@ export default class Form extends Component {
         form.remove(),
         (window.dataLayer = window.dataLayer || []),
         window.dataLayer.push({
-          event: "contactFormSubmission",
+          event: "appointmentFormSubmission",
         })
       )
       .catch((error) => alert(error));

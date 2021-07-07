@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import MicroModal from "micromodal";
 import styled from "@emotion/styled";
 import tw from "twin.macro";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -75,22 +74,16 @@ const StyledModal = styled.div`
   }
 `;
 
-const Modal = () => {
-  // if (document.readyState === "complete") {
-  //   if (typeof window !== "undefined") {
-  //     MicroModal.show("modal-promo", {
-  //       openTrigger: "data-modal-open",
-  //       closeTrigger: "data-modal-close",
-  //       disableFocus: true,
-  //       disableScroll: true,
-  //       awaitOpenAnimation: true,
-  //       awaitCloseAnimation: true,
-  //     });
-  //   }
-  // } else {
-  //   // window.addEventListener("load", handleLoad, { passive: true });
-  // }
+function closedPopup() {
+  var date, expires;
+  date = new Date();
+  date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000);
+  expires = "; expires=" + date.toUTCString();
 
+  document.cookie = "closedPopup=true" + expires + ";";
+}
+
+const Modal = () => {
   const data = useStaticQuery(graphql`
     {
       popup: file(relativePath: { eq: "global/popup-special.jpg" }) {
@@ -116,7 +109,6 @@ const Modal = () => {
         <div
           className="overlay fixed flex items-center justify-center top-0 right-0 left-0 bottom-0 bg-black bg-opacity-30 outline-none"
           tabIndex="-1"
-          data-modal-close
         >
           <div
             className="relative content-wrapper bg-primary-300 w-full overflow-auto max-w-[827px] my-auto mx-4"
@@ -125,10 +117,12 @@ const Modal = () => {
           >
             <div className="border border-white rounded-6xl absolute top-0 bottom-0 right-0 left-0 z-10 m-6"></div>
             <div className="flex justify-end items-center pt-2 px-3">
-              <i
-                className="close fal fa-times text-4xl text-white hover:text-white cursor-pointer transition-all duration-300 ease-linear"
-                data-modal-close
-              ></i>
+              <button onClick={closedPopup}>
+                <i
+                  className="close fal fa-times text-4xl text-white hover:text-white cursor-pointer transition-all duration-300 ease-linear"
+                  data-modal-close
+                ></i>
+              </button>
             </div>
 
             <div className="pt-3 px-12 md:px-20 pb-5 relative z-10">
@@ -164,6 +158,7 @@ const Modal = () => {
 
             <GatsbyImage
               image={data.popup.childImageSharp.gatsbyImageData}
+              alt="Promo popup"
               className="w-full hidden md:block"
             />
           </div>

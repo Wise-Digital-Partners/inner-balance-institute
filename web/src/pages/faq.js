@@ -289,7 +289,7 @@ const Page = ({ data }) => {
                           const icon = state.expanded ? "fa-minus" : "fa-plus";
                           return (
                             <i
-                              className={`fal ${icon} text-xl text-primary-700 mr-5`}
+                              className={`fal ${icon} text-xl text-primary-600 mr-5`}
                             ></i>
                           );
                         }}

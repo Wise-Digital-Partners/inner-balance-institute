@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
+import MicroModal from "micromodal";
 
 import PromoBar from "../Navigation/PromoBar";
 // import UtilityNav from "../Header/UtilityNav";
@@ -79,6 +80,16 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
 
     if (document.readyState === "complete") {
       handleLoad();
+      if (document.cookie.indexOf("closedPopup") === -1) {
+        MicroModal.show("modal-promo", {
+          openTrigger: "data-modal-open",
+          closeTrigger: "data-modal-close",
+          disableFocus: true,
+          disableScroll: true,
+          awaitOpenAnimation: true,
+          awaitCloseAnimation: true,
+        });
+      }
     } else {
       window.addEventListener("load", handleLoad, { passive: true });
     }

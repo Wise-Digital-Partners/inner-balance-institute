@@ -14,7 +14,7 @@ const Button = ({
   text,
 }) => (
   <a
-    className={`group relative inline-flex font-body text-primary-900 hover:text-primary-700 font-semibold pb-1.5 focus:outline-none ${className}`}
+    className={`group relative inline-flex font-body text-primary-900 hover:text-primary-600 font-semibold pb-1.5 focus:outline-none ${className}`}
     href={href}
     target={target}
     rel={rel}

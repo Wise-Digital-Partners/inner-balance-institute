@@ -213,7 +213,7 @@ export default class Slider extends Component {
                   className={`focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border bg-white hover:bg-primary-600 hover:text-white ${
                     this.state.currentSlide + 1 === 1
                       ? "text-gray-300 border-gray-300 pointer-events-none"
-                      : "text-primary-700 border-primary-700"
+                      : "text-primary-600 border-primary-600"
                   }`}
                 >
                   <i className="fal fa-arrow-left text-2xl focus:no-underline"></i>
@@ -233,7 +233,7 @@ export default class Slider extends Component {
                   className={`focus:outline-none w-12 h-12 rounded-full flex justify-center items-center border bg-white hover:bg-primary-600 hover:text-white ${
                     this.state.currentSlide + 1 === this.props.slides.length
                       ? "text-gray-300 border-gray-300 pointer-events-none"
-                      : "text-primary-700 border-primary-700"
+                      : "text-primary-600 border-primary-600"
                   }`}
                 >
                   <i className="fal fa-arrow-right text-2xl focus:no-underline"></i>

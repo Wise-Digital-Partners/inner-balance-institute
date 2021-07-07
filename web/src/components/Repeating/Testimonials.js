@@ -18,7 +18,7 @@ const StyledSlider = styled.div`
   .slick-next {
     ${tw`h-12 w-12 bg-white hover:bg-primary-600 border border-solid border-primary-700 rounded-full`}
     i {
-      ${tw`text-2xl text-primary-700`}
+      ${tw`text-2xl text-primary-600`}
     }
     &:hover {
       i {

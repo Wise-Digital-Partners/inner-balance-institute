@@ -12,7 +12,7 @@ const StyledScrollNavigation = styled.div`
     ul {
       ${tw`flex flex-col space-y-3`}
       li {
-        ${tw`font-body text-primary-700 opacity-40 leading-5 tracking-wider flex items-center`}
+        ${tw`font-body text-primary-600 opacity-40 leading-5 tracking-wider flex items-center`}
         &:before {
           content: "";
           ${tw`w-0 bg-primary-600 h-px transition-all duration-500 ease-in-out`}
