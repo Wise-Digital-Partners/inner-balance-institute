@@ -80,16 +80,16 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
 
     if (document.readyState === "complete") {
       handleLoad();
-      if (document.cookie.indexOf("closedPopup") === -1) {
-        MicroModal.show("modal-promo", {
-          openTrigger: "data-modal-open",
-          closeTrigger: "data-modal-close",
-          disableFocus: true,
-          disableScroll: true,
-          awaitOpenAnimation: true,
-          awaitCloseAnimation: true,
-        });
-      }
+      // if (document.cookie.indexOf("closedPopup") === -1) {
+      //   MicroModal.show("modal-promo", {
+      //     openTrigger: "data-modal-open",
+      //     closeTrigger: "data-modal-close",
+      //     disableFocus: true,
+      //     disableScroll: true,
+      //     awaitOpenAnimation: true,
+      //     awaitCloseAnimation: true,
+      //   });
+      // }
     } else {
       window.addEventListener("load", handleLoad, { passive: true });
     }
