@@ -111,7 +111,7 @@ const Modal = () => {
           tabIndex="-1"
         >
           <div
-            className="relative content-wrapper bg-primary-300 w-full overflow-auto max-w-[827px] my-auto mx-4"
+            className="relative content-wrapper bg-secondary-600 w-full overflow-auto max-w-[827px] my-auto mx-4"
             role="dialog"
             aria-modal="true"
           >
@@ -126,22 +126,19 @@ const Modal = () => {
             </div>
 
             <div className="pt-3 px-12 md:px-20 pb-5 relative z-10">
-              <header className="text-center mb-8 md:mb-12">
+              <header className="text-center mb-8 md:mb-20">
                 <p className="heading-one text-white mb-2">Special!</p>
                 <p className="font-heading text-2xl md:text-3xl font-bold uppercase text-primary-900 mb-3">
                   Pay just $57 for your initial exam.
                 </p>
-                <p className="md:text-lg text-black mb-2">
+                <p className="md:text-lg text-black mb-0">
                   We’re welcoming new and returning patients in need of a
                   consultation. You’ll get that, plus digital x-rays and a
                   complete follow-up care plan. Schedule your appointment today!
                 </p>
-                <p className="font-heading md:text-lg font-bold text-primary-900 mb-0">
-                  Aquí hablamos español!
-                </p>
               </header>
 
-              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-20 lg:space-x-32 mb-8 md:-mb-24">
+              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-20 lg:space-x-40 mb-8 md:-mb-32">
                 <ButtonGhost
                   href="tel:619-543-9999"
                   text="Call or Text (619) 543-9999"
@@ -151,16 +148,18 @@ const Modal = () => {
                   as="button"
                   modal="modal-contact"
                   text="Get Started"
-                  className="w-full md:w-auto bg-secondary-600 hover:bg-primary-600"
+                  className="w-full md:w-auto bg-primary-600 md:bg-secondary-600"
                 />
               </div>
             </div>
 
-            <GatsbyImage
-              image={data.popup.childImageSharp.gatsbyImageData}
-              alt="Promo popup"
-              className="w-full hidden md:block"
-            />
+            <div className="hidden md:block">
+              <GatsbyImage
+                image={data.popup.childImageSharp.gatsbyImageData}
+                alt="Promo popup"
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
       </div>

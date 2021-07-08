@@ -38,8 +38,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Spinal Decompression Therapy San Diego | Inner Balance"
         description="Choose Inner Balance Institute in San Diego for expert spinal decompression therapy that'll help relieve your pain."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="bg-primary-100 rounded-b-4xl md:rounded-b-8xl md:pt-36 pb-8 md:pb-14">
@@ -55,7 +55,14 @@ const Page = ({ data }) => {
             <div>
               <h1>San Diego Spinal Decompression Therapy</h1>
               <p className="text-primary-900 md:text-lg mb-0">
-              Spinal decompression therapy is available at Inner Balance Institute! This non-surgical, non-invasive therapy involves stretching the spine, using a traction table or similar motorized device, with the goal to relieve pain. This new Spinal Decompression Therapy technology and machine can create space between the vertebrae or spinal bones to allow the herniated or bulging disc to retract and repair itself without the use of drugs or surgery.
+                Spinal decompression therapy is available at Inner Balance
+                Institute! This non-surgical, non-invasive therapy involves
+                stretching the spine, using a traction table or similar
+                motorized device, with the goal to relieve pain. This new Spinal
+                Decompression Therapy technology and machine can create space
+                between the vertebrae or spinal bones to allow the herniated or
+                bulging disc to retract and repair itself without the use of
+                drugs or surgery.
               </p>
             </div>
           </div>
@@ -109,7 +116,11 @@ const Page = ({ data }) => {
             <div className="order-1 md:order-2">
               <h2>About Our Spinal Decompression Therapy</h2>
               <p className="md:text-lg">
-              Research studies have shown that decompression is 86% to 91% effective in healing slipped or herniated discs so that you no longer need surgery or need to take harmful medications. At Inner Balance Institute, we’re your San Diego spinal decompression therapy specialists.
+                Research studies have shown that decompression is 86% to 91%
+                effective in healing slipped or herniated discs so that you no
+                longer need surgery or need to take harmful medications. At
+                Inner Balance Institute, we’re your San Diego spinal
+                decompression therapy specialists.
               </p>
             </div>
           </div>
@@ -191,12 +202,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage_FB.jpg" }
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage_TW.jpg" }
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
     ) {
       publicURL
     }

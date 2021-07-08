@@ -38,8 +38,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Massage Therapy San Diego | Inner Balance Institute"
         description="Relieve pain, rehabilitate an injury, and reduce stress at the same time with massage therapy at San Diego's Inner Balance Institute."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="bg-primary-100 rounded-b-4xl md:rounded-b-8xl md:pt-36 pb-8 md:pb-14">
@@ -194,12 +194,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage_FB.jpg" }
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage_TW.jpg" }
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
     ) {
       publicURL
     }

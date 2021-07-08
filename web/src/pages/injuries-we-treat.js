@@ -52,8 +52,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Injuries We Treat | San Diego Chiropractor | Inner Balance"
         description="Get natural, non-invasive treatement for injuries due to auto accidents, sciatica, back and shoulder pain, spinal stenosis and herniated and bulging discs."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="bg-primary-100 pt-24 md:pt-36 pb-8 md:pb-10">
@@ -100,12 +100,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage_FB.jpg" }
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage_TW.jpg" }
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
     ) {
       publicURL
     }

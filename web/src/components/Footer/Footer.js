@@ -351,7 +351,7 @@ const Footer = () => {
       </footer>
 
       <ModalContact />
-      {/* <ModalPromo /> */}
+      <ModalPromo />
     </>
   );
 };

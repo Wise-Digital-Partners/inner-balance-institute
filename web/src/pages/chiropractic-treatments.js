@@ -39,8 +39,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Chiropractic Treatments San Diego | Inner Balance"
         description="Our chiropractic treatments includes helping with auto accident injuries, spinal decompression therapy, and more. Call us if you're suffering from pain today!"
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="bg-primary-100 pt-24 md:pt-36 pb-8 md:pb-10">
@@ -85,12 +85,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage_FB.jpg" }
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage_TW.jpg" }
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
     ) {
       publicURL
     }
