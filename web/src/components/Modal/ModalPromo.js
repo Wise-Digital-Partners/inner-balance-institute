@@ -77,7 +77,7 @@ const StyledModal = styled.div`
 function closedPopup() {
   var date, expires;
   date = new Date();
-  date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000);
+  date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
   expires = "; expires=" + date.toUTCString();
 
   document.cookie = "closedPopup=true" + expires + ";";
