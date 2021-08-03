@@ -70,7 +70,7 @@ const Treatments = ({ className, headingLevel }) => {
   const HeadingTag = headingLevel || "h2";
 
   return (
-    <section className={`${className || "mb-24 lg:mb-32"}`}>
+    <section className={`${className || "mb-24 lg:mb-32 overflow-hidden"}`}>
       <div className="container">
         <Slider slides={treatments} headingTag={HeadingTag} />
       </div>
