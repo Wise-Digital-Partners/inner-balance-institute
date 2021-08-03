@@ -16,6 +16,7 @@
   "devDependencies": {
     "@emotion/react": "^11.1.5",
     "@fortawesome/fontawesome-pro": "^5.15.2",
+    "@netlify/plugin-gatsby": "^1.0.3",
     "@tailwindcss/forms": "^0.3.3",
     "core-js": "^3.14.0",
     "dotenv": "^8.0.0",
