@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import ModalContact from "../Modal/ModalContact";
-import ModalPromo from "../Modal/ModalPromo";
+// import ModalPromo from "../Modal/ModalPromo";
 
 const Footer = () => {
   const getYear = () => {
@@ -351,7 +351,7 @@ const Footer = () => {
       </footer>
 
       <ModalContact />
-      <ModalPromo />
+      {/* <ModalPromo /> */}
     </>
   );
 };
