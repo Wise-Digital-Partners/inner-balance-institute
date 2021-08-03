@@ -1,5 +1,5 @@
 .radio-custom {
-  @apply bg-white border border-solid border-gray-200 px-2 py-1.5 text-black text-sm font-semibold;
+  @apply bg-white border border-solid border-gray-200 px-2 py-1.5 text-black text-sm font-semibold block text-center;
 }
 input[type="radio"] {
   @apply mr-2 absolute opacity-0;

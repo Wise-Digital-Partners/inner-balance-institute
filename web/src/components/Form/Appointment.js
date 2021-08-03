@@ -141,7 +141,7 @@ export default class Form extends Component {
               <legend className="label" htmlFor="preferred-days">
                 What day(s) do you prefer?
               </legend>
-              <div className="flex space-x-3 mt-1">
+              <div className="grid grid-cols-4 md:flex gap-2 md:gap-0 md:space-x-3 mt-1">
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
@@ -231,7 +231,7 @@ export default class Form extends Component {
               <legend className="label" htmlFor="preferred-time">
                 What time(s) do you prefer?
               </legend>
-              <div className="flex space-x-3 mt-1">
+              <div className="grid grid-cols-4 md:flex gap-2 md:gap-0 md:space-x-3 mt-1">
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
