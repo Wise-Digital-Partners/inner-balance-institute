@@ -77,10 +77,10 @@ const StyledModal = styled.div`
 
 const StyledTabs = styled.div`
   .react-tabs__tab-list {
-    ${tw`grid grid-cols-2 gap-x-2 mb-6 md:mb-10 border-none`}
+    ${tw`grid grid-cols-2 gap-2 mb-6 md:mb-10 border-none`}
   }
   .react-tabs__tab {
-    ${tw`text-black text-sm font-semibold py-2 px-4 bg-gray-50 rounded flex items-center justify-center w-full border-none transition-colors duration-300 ease-linear`}
+    ${tw`text-black text-sm font-semibold py-2 px-3 md:px-4 bg-gray-50 rounded flex items-center justify-center w-full border-none transition-colors duration-300 ease-linear`}
   }
   .react-tabs__tab--selected {
     ${tw`text-white bg-primary-600`}
@@ -116,7 +116,7 @@ const Modal = () => {
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex justify-between items-center border-b border-solid border-gray-50 border-opacity-20 pt-10 pb-4 md:py-4 px-6 md:pl-20 md:pr-6">
+            <div className="flex justify-between items-center border-b border-solid border-gray-50 border-opacity-20 pt-14 pb-4 md:py-4 px-4 md:px-6 md:pl-20 md:pr-6">
               <a href="tel:619-543-9999" className="text-white font-semibold">
                 <i className="fas fa-phone-alt mr-2"></i> (619) 543-9999
               </a>
@@ -126,7 +126,7 @@ const Modal = () => {
               ></i>
             </div>
 
-            <div className="pt-7 px-6 md:px-20 pb-24">
+            <div className="pt-7 px-4 md:px-6 md:px-20 pb-24">
               <header className="mb-8 text-center">
                 <p className="heading-three text-white mb-0">Contact Us</p>
               </header>
@@ -136,7 +136,8 @@ const Modal = () => {
                   <TabList>
                     <Tab>
                       <i className="fal fa-calendar text-lg mr-2"></i>
-                      Request Appointment
+                      <span className="hidden md:inline">Request</span>
+                      Appointment
                     </Tab>
                     <Tab>
                       <i className="fal fa-envelope text-lg mr-2"></i>
