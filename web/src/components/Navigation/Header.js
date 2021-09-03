@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
-import MicroModal from "micromodal";
+// import MicroModal from "micromodal";
 
 import PromoBar from "../Navigation/PromoBar";
 // import UtilityNav from "../Header/UtilityNav";

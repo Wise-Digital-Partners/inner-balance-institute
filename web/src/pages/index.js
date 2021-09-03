@@ -56,7 +56,7 @@ const Page = ({ data }) => {
     {
       image: data.herniatedBulgingDiscs.childImageSharp.gatsbyImageData,
       heading: "Herniated & Bulging Discs",
-      text: "Treat herniated and bulging discs with safe and natural spinal decompression.",
+      text: "Our chiropractors can treat herniated and bulging discs with safe and natural spinal decompression.",
       link: "/herniated-bulging-discs-chiropractor/",
     },
   ];
@@ -122,11 +122,11 @@ const Page = ({ data }) => {
       <section className="mb-20 md:mb-32">
         <div className="container">
           <header className="mb-12 md:mb-16 max-w-2xl">
-            <h2>Injuries We Treat</h2>
+            <h2>Injuries Our Chiropractors Treat</h2>
             <p className="md:text-lg">
-              At Inner Balance Institute, our chiropractors treat a variety of
-              injuries and help prevent them. Here’s what we treat using
-              non-invasive and effective techniques.
+              At Inner Balance Institute, our San Diego chiropractors treat a
+              variety of injuries and help prevent them. Here’s what we treat
+              using non-invasive and effective techniques.
             </p>
           </header>
 

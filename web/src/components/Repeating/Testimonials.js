@@ -111,8 +111,10 @@ const Testimonial = ({ className, headingLevel }) => {
       }`}
     >
       <div className="container">
-        <header className="mb-8 md:mb-8 text-center hidden md:block">
-          <HeadingTag>Our Patients Love Us</HeadingTag>
+        <header className="max-w-2xl mx-auto mb-8 md:mb-8 text-center hidden md:block">
+          <HeadingTag>
+            What’s To Love About Your Top San Diego Chiropractor
+          </HeadingTag>
         </header>
         <StyledSlider className="relative">
           <Slider>

@@ -33,7 +33,7 @@ const Page = ({ data }) => {
             <div>
               <h1>Spinal Stenosis Chiropractor</h1>
               <p className="text-primary-900 md:text-lg mb-0">
-                Do you need chiropractic treatment for spinal stenosis? Let’s
+                Do you need spinal stenosis chiropractic treatment? Let’s
                 understand this condition better first. Spinal stenosis is a
                 narrowing of the spinal canal or vertebrae. As we age and grow
                 older, there can be a tendency for the spinal bones to begin to
@@ -61,14 +61,15 @@ const Page = ({ data }) => {
                 severe pain to the patient.
               </p>
               <p className="md:text-lg">
-                There are a number of medical treatments for spinal stenosis.
-                However, these treat only the symptoms of stenosis and not the
-                true cause. Your primary care physician will most likely
-                prescribe medications, epidurals, or cortisone injections. When
-                these options are exhausted, spinal surgery may be recommended.
-                All treatment options can have serious side effects, certain
-                risks, further degeneration and only mask the pain without
-                treating the true cause of the problem.
+                There are a number of medical treatments that can be performed
+                during spinal stenosis chiropractic care. However, these treat
+                only the symptoms of stenosis and not the true cause. Your
+                primary care physician will most likely prescribe medications,
+                epidurals, or cortisone injections. When these options are
+                exhausted, spinal surgery may be recommended. All treatment
+                options can have serious side effects, certain risks, further
+                degeneration and only mask the pain without treating the true
+                cause of the problem.
               </p>
             </div>
             <div className="pt-4 md:pt-10 md:pb-6 md:h-[677px] relative">
@@ -93,13 +94,14 @@ const Page = ({ data }) => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2>Treatment</h2>
+              <h2>Spinal Stenosis Chiropractic Treatment</h2>
               <p className="md:text-lg">
-                Our goal at Inner Balance Institute is to provide treatment that
-                will promote the body’s potential to heal itself. Chiropractic
-                care is non-invasive, non-surgical, drug-free and suitable for
-                almost everyone. Spinal Decompression Therapy is also a
-                non-invasive treatment that is offered at our facility.
+                Our goal at Inner Balance Institute is to provide spinal
+                stenosis chiropractic treatment that will promote the body’s
+                potential to heal itself. Chiropractic care is non-invasive,
+                non-surgical, drug-free and suitable for almost everyone. Spinal
+                Decompression Therapy is also a non-invasive treatment that is
+                offered at our facility.
               </p>
               <p className="md:text-lg">
                 At Inner Balance Institute, we provide a safe and natural
@@ -178,8 +180,11 @@ const Page = ({ data }) => {
 
       <Treatments />
       <Testimonials />
-      <WhyUs />
-      <CallToAction className="mb-16 md:mb-18" />
+      <WhyUs heading="Why Choose Our Spinal Stenosis Chiropractic Experts" />
+      <CallToAction
+        heading="Get Spinal Stenosis Chiropractic Care"
+        className="mb-16 md:mb-18"
+      />
       <RecentBlogPosts className="mb-20 md:mb-22" />
     </Layout>
   );

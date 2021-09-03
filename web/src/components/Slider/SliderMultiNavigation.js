@@ -153,7 +153,9 @@ export default class Slider extends Component {
           </div>
           <div className="lg:col-end-13 lg:col-span-9 lg:pt-8 lg:pb-14">
             <header className="mb-5 lg:mb-16">
-              <HeadingTag>Our Specialized Treatments</HeadingTag>
+              <HeadingTag>
+                Specialized Treatments From Our Chiropractors
+              </HeadingTag>
             </header>
             <div className="relative">
               <Slick className="slider-nav mb-4 -mx-4" {...imageSliderSettings}>

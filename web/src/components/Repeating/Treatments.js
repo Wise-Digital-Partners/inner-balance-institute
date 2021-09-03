@@ -55,7 +55,7 @@ const Treatments = ({ className, headingLevel }) => {
     },
     {
       heading: "Physiotherapy",
-      text: "We provide exceptional guidance in developing a tailored program for your alignment.",
+      text: "Our chiropractors provide exceptional guidance in developing a tailored program for your alignment.",
       link: "/physiotherapy-san-diego/",
       image: data.phisiotherapy.childImageSharp.gatsbyImageData,
     },

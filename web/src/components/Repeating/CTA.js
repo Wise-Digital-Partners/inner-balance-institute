@@ -31,11 +31,11 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
         <div className="grid md:grid-cols-2 gap-y-8 items-center">
           <div className="md:pr-10 lg:pr-20 text-center md:text-left">
             <HeadingTag className="text-white mb-8">
-              {heading || "Schedule Your Appointment"}
+              {heading || "Schedule An Appointment With Our Chiropractors"}
             </HeadingTag>
             <p className="text-white mb-7 text-lg md:max-w-[418px]">
               {subtext ||
-                "Get to the root cause of your problems and stop the pain naturally. Schedule your appointment today!"}
+                "Get to the root cause of your problems and stop the pain naturally. Schedule your appointment with Inner Balance, your top San Diego chiropractor, today!"}
             </p>
             <div className="grid md:flex flex-wrap md:flex-nowrap space-y-5 md:space-y-0 md:space-x-6">
               <ButtonSolid

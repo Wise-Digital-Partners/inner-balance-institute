@@ -122,13 +122,14 @@ const Page = ({ data }) => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2>Treatment</h2>
+              <h2>Treatment For Auto Accidents</h2>
               <p className="md:text-lg">
                 Our goal at Inner Balance Institute is to provide treatment that
-                will promote the body’s potential to heal itself. Chiropractic
-                care is non-invasive, non-surgical, drug-free and suitable for
-                almost everyone. Spinal Decompression Therapy is also a
-                non-invasive treatment that is offered at our facility.
+                will promote the body’s potential to heal itself following an
+                auto accident. Chiropractic care is non-invasive, non-surgical,
+                drug-free and suitable for almost everyone. Spinal Decompression
+                Therapy is also a non-invasive treatment that is offered at our
+                facility.
               </p>
               <p className="md:text-lg">
                 At Inner Balance Institute, we provide a safe and natural
@@ -140,13 +141,13 @@ const Page = ({ data }) => {
               </p>
               <p className="md:text-lg">
                 We take most patients on a lien basis! This means there are no
-                out-of-pocket expenses to you. Schedule an appointment with one
-                of Inner Balance Institute’s experienced chiropractors for a
-                comprehensive examination. We then establish goals with you to
-                determine the right treatment plan. For more than 20 years,
-                Inner Balance has successfully treated personal injury and
-                sciatic pain while helping our patients recover faster, better,
-                and naturally.
+                out-of-pocket expenses to you for your auto accident care.
+                Schedule an appointment with one of Inner Balance Institute’s
+                experienced chiropractors for a comprehensive examination. We
+                then establish goals with you to determine the right treatment
+                plan. For more than 20 years, Inner Balance has successfully
+                treated personal injury and sciatic pain while helping our
+                patients recover faster, better, and naturally.
               </p>
               <p className="md:text-lg mb-0">Se Habla Español!</p>
             </div>
