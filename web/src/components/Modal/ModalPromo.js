@@ -88,12 +88,7 @@ const Modal = () => {
     {
       popup: file(relativePath: { eq: "global/popup-special.jpg" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            width: 827
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: CONSTRAINED, width: 827)
         }
       }
     }

@@ -13,28 +13,28 @@ const Treatments = ({ className, headingLevel }) => {
         relativePath: { eq: "repeating/Treatments/Chiropractic.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500)
         }
       }
       massageTherapy: file(
         relativePath: { eq: "repeating/Treatments/Massage Therapy-new.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500)
         }
       }
       phisiotherapy: file(
         relativePath: { eq: "repeating/Treatments/Phisiotherapy.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500)
         }
       }
       spinalDecompression: file(
         relativePath: { eq: "repeating/Treatments/Spinal-Decompression.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100)
+          gatsbyImageData(layout: CONSTRAINED, width: 500)
         }
       }
     }

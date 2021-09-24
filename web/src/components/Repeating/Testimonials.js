@@ -46,11 +46,7 @@ const Testimonial = ({ className, headingLevel }) => {
         }
       ) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       quote: file(
@@ -64,17 +60,17 @@ const Testimonial = ({ className, headingLevel }) => {
         relativePath: { eq: "repeating/Testimonials/Facebook-Logo.png" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 125, quality: 100)
+          gatsbyImageData(layout: FIXED, width: 125)
         }
       }
       google: file(relativePath: { eq: "reviews/google.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 110, quality: 100)
+          gatsbyImageData(layout: FIXED, width: 110)
         }
       }
       yelp: file(relativePath: { eq: "reviews/yelp.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 84, quality: 100)
+          gatsbyImageData(layout: FIXED, width: 84)
         }
       }
     }

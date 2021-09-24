@@ -204,100 +204,60 @@ export const query = graphql`
     }
     heroDesktop: file(relativePath: { eq: "home/1.0 Hero Desktop.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     heroMobile: file(relativePath: { eq: "home/1.0 Hero Mobile.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     intro: file(relativePath: { eq: "home/2.0 Home - collage - new.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 534
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 534)
       }
     }
     autoAccidents: file(
       relativePath: { eq: "home/3.0 Home - Auto Accident.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     sciatica: file(relativePath: { eq: "home/3.2 Home - Sciatica.jpg" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     backPain: file(relativePath: { eq: "home/3.2 Home - Back Pain.jpg" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     shoulderPain: file(
       relativePath: { eq: "home/3.3 Home - Shoulder Pain.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     spinalStenosis: file(
       relativePath: { eq: "home/3.4 Home - Spinal stenosis.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     herniatedBulgingDiscs: file(
       relativePath: { eq: "home/3.5 Home - Hernieted and Bulging Disc.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 373
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 373)
       }
     }
     partners: file(relativePath: { eq: "home/4.0 Home - Wellness.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 607
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 607)
       }
     }
   }

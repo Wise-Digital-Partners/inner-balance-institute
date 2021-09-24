@@ -26,52 +26,27 @@ const ReviewCards = ({ gridLayout }) => {
     {
       yelp: file(relativePath: { eq: "reviews/yelp.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FIXED
-            width: 70
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FIXED, width: 70)
         }
       }
       google: file(relativePath: { eq: "reviews/google.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FIXED
-            width: 76
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FIXED, width: 76)
         }
       }
       facebook: file(relativePath: { eq: "reviews/facebook.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FIXED
-            width: 95
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FIXED, width: 95)
         }
       }
       houzz: file(relativePath: { eq: "reviews/houzz.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FIXED
-            width: 98
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FIXED, width: 98)
         }
       }
       thumbtack: file(relativePath: { eq: "reviews/thumbtack.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FIXED
-            width: 124
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FIXED, width: 124)
         }
       }
       headshot: file(relativePath: { eq: "reviews/User.svg" }) {

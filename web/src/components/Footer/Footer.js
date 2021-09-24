@@ -21,12 +21,7 @@ const Footer = () => {
     {
       logo: file(relativePath: { eq: "global/logo.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            width: 188
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: CONSTRAINED, width: 188)
         }
       }
       nestLogo: file(relativePath: { eq: "global/Nest Logo.svg" }) {

@@ -504,57 +504,57 @@ export const query = graphql`
     }
     heroDesktop: file(relativePath: { eq: "about/1.0 Hero About.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     award1: file(relativePath: { eq: "about/3.1 Award 1.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     award2: file(relativePath: { eq: "about/3.2 Award 2.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     award3: file(relativePath: { eq: "about/3.3 Award 3.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     award4: file(relativePath: { eq: "about/uptown-news-downtown.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs1: file(relativePath: { eq: "about/4.0 Experience.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs2: file(relativePath: { eq: "about/4.1 Quality.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs3: file(relativePath: { eq: "about/4.2 Integrity.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs4: file(relativePath: { eq: "about/4.3 Holistic.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs5: file(relativePath: { eq: "about/4.4 Customized.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUs6: file(relativePath: { eq: "about/4.5 Organized.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     whyUsIcon1: file(relativePath: { eq: "about/4.0 Icon Exp.svg" }) {

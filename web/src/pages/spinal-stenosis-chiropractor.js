@@ -206,34 +206,19 @@ export const query = graphql`
       relativePath: { eq: "spinal-stenosis/1.0 Hero Spinal.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 570
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 570)
       }
     }
     symptoms: file(
       relativePath: { eq: "spinal-stenosis/2.0 symptoms Collage.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 618
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 618)
       }
     }
     treatment: file(relativePath: { eq: "spinal-stenosis/3.0 Treatment.jpg" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 560
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 560)
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {

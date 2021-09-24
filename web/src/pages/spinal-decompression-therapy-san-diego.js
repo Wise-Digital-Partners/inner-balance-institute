@@ -217,36 +217,21 @@ export const query = graphql`
       }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 570
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 570)
       }
     }
     symptoms: file(
       relativePath: { eq: "spinal-decompression/2.0 spinal mosaic.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 615
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 615)
       }
     }
     treatment: file(
       relativePath: { eq: "spinal-decompression/3.0 About spinal.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 560
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 560)
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {

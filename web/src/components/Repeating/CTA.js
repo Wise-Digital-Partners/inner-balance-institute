@@ -13,11 +13,7 @@ const CTA = ({ heading, headingLevel, subtext, className }) => {
         relativePath: { eq: "repeating/CTA/1.0 CTA desktop.jpg" }
       ) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            quality: 100
-          )
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

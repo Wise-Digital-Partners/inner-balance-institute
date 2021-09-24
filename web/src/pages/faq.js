@@ -327,7 +327,7 @@ export const query = graphql`
     }
     heroStacked: file(relativePath: { eq: "faq/1.0 FAQ Hero.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

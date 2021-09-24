@@ -86,22 +86,12 @@ const MainNav = ({
     {
       darkLogo: file(relativePath: { eq: "global/logo.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            width: 188
-            placeholder: NONE
-            quality: 100
-          )
+          gatsbyImageData(layout: CONSTRAINED, width: 188, placeholder: NONE)
         }
       }
       lightLogo: file(relativePath: { eq: "global/logo.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            width: 188
-            placeholder: NONE
-            quality: 100
-          )
+          gatsbyImageData(layout: CONSTRAINED, width: 188, placeholder: NONE)
         }
       }
     }

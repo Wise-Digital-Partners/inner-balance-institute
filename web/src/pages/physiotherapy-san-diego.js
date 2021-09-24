@@ -222,36 +222,21 @@ export const query = graphql`
       relativePath: { eq: "physiotherapy/1.0 Hero Physiotherapy.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 570
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 570)
       }
     }
     symptoms: file(
       relativePath: { eq: "physiotherapy/2.0 Physiotherapy mosaic.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 615
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 615)
       }
     }
     treatment: file(
       relativePath: { eq: "physiotherapy/3.0 About physical T.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          width: 560
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, width: 560)
       }
     }
     step01: file(relativePath: { eq: "global/step-01.svg" }) {
