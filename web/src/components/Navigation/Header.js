@@ -22,12 +22,16 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
       // calculate #offcanvas-navigation menu offset top
       offcanvasNavigation.style.top =
         siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
+
+      bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
     };
 
     const handleResize = () => {
       // calculate #offcanvas-navigation offset top on resize
       offcanvasNavigation.style.top =
         siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
+
+      bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
     };
 
     const handleScroll = () => {
@@ -52,8 +56,8 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
 
         // recalculate #body-content offset top on scroll
         if (headerStyle === "overlap" || headerStyle === "overlap-hero") {
-          bodyContent.style.marginTop = "0px";
-          bodyContent.style.paddingTop = null;
+          // bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
+          // bodyContent.style.paddingTop = null;
         } else {
           bodyContent.style.paddingTop = mainNavigation.offsetHeight + "px";
           bodyContent.style.marginTop = null;
@@ -67,9 +71,10 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
         // recalculate #body-content offset top on scroll
         if (headerStyle === "overlap" || headerStyle === "overlap-hero") {
           // bodyContent.style.marginTop = "-" + mainNavigation.offsetHeight + "px";
-          bodyContent.style.paddingTop = null;
+          bodyContent.style.marginTop = null;
+          // bodyContent.style.paddingTop = null;
         } else {
-          bodyContent.style.paddingTop = null;
+          // bodyContent.style.paddingTop = null;
           bodyContent.style.marginTop = null;
         }
       }
@@ -102,7 +107,7 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
   }, [scrolled, headerStyle]);
 
   return (
-    <div id="site-navigation" className="relative z-30">
+    <div id="site-navigation" className="z-30 fixed left-0 w-full">
       <PromoBar />
       {/* <UtilityNav /> */}
       <MainNav

@@ -14,7 +14,8 @@ import Accordion from "./Accordion";
 
 const StyledMainNav = styled.nav`
   &[data-fixed="true"] {
-    ${tw`fixed top-0 left-0 w-full bg-primary-800 z-50`}
+    /* ${tw`fixed top-0 left-0 w-full bg-primary-800 z-50`} */
+    ${tw`bg-primary-800`}
     #navigation-desktop {
       > li {
         > a {
