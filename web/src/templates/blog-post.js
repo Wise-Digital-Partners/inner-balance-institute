@@ -63,7 +63,7 @@ const BlogPostTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
-    <Layout>
+    <Layout headerStyle="overlap">
       {errors && <SearchEngineOptimization title="GraphQL Error" />}
       {post && (
         <SearchEngineOptimization

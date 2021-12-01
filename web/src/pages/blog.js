@@ -54,14 +54,14 @@ const ArchivePage = (props) => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
 
   return (
-    <Layout>
+    <Layout headerStyle="overlap">
       <SearchEngineOptimization
         title="Chiropractic Blog & Articles | Inner Balance Institute"
         description="Follow our blog for expert chiropractic advice and discussion of methods from the team at Inner Balance Institute."
         // openGraphImage={data.openGraphImage.publicURL}
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
-      <section className="pt-10 md:pt-16 mb-20 md:mb-32">
+      <section className="pt-24 md:pt-40 mb-20 md:mb-32">
         <div className="container">
           <header className="mb-12 md:mb-18">
             <h1>Blog</h1>

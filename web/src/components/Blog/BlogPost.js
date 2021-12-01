@@ -29,7 +29,7 @@ function BlogPost(props) {
     // publishedAt,
   } = props;
   return (
-    <article className="pt-12 md:pt-18">
+    <article className="pt-24 md:pt-40">
       <div className="container">
         <div>
           {categories && (

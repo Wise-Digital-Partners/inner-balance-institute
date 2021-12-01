@@ -4,8 +4,8 @@ import Layout from "../components/Layout";
 
 const Page = () => {
   return (
-    <Layout>
-      <section className="pt-12 md:pt-16 pb-22 md:pb-32">
+    <Layout headerStyle="overlap">
+      <section className="pt-24 md:pt-40 pb-22 md:pb-32">
         <div className="container">
           <h1>Privacy Policy</h1>
           <p>
