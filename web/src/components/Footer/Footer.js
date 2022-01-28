@@ -266,16 +266,6 @@ const Footer = () => {
                         doTerra
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="https://ibi.metagenics.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-body font-bold tracking-wide uppercase text-sm font-semibold text-primary-600 md:text-white hover:text-primary-300"
-                      >
-                        Metagenics
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
