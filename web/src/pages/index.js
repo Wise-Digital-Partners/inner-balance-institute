@@ -32,7 +32,7 @@ const Page = ({ data }) => {
     {
       image: data.sciatica.childImageSharp.gatsbyImageData,
       heading: "Sciatica",
-      text: "Are you suffering from sciatica or sciatic pain? Our experienced chiropractors can help.",
+      text: "Are you suffering from sciatica or sciatic pain? Our chiropractic professionals can help.",
       link: "/sciatica-chiropractor/",
     },
     {
@@ -79,7 +79,7 @@ const Page = ({ data }) => {
         className="rounded-b-5xl md:rounded-b-8xl overflow-hidden"
       >
         <p className="text-mobile-7xl md:text-7xl font-heading font-bold uppercase text-white mb-3 md:mb-4">
-          Top San Diego Chiropractor
+          San Diego Chiropractor
         </p>
         <p className="md:text-3xl font-body font-semibold md:font-normal text-white mb-5 md:mb-8">
           Our award-winning clinic will bring your body back into balance.
@@ -107,12 +107,11 @@ const Page = ({ data }) => {
                 <span className="whitespace-nowrap">San Diego</span>, CA
               </h1>
               <p className="text-primary-900 md:text-lg mb-0">
-                Welcome to Inner Balance Institute, your top San Diego
-                chiropractor. We’ve been providing chiropractic care to the San
-                Diego community since 1997 and we are committed to the health of
-                our patients! Our talented team is here to help, whether it’s
-                for personal injuries, spinal decompression, or to support your
-                overall health.
+                Welcome to Inner Balance Institute. We’ve been providing
+                chiropractic care to the San Diego community since 1997 and we
+                are committed to the health of our patients! Our talented team
+                is here to help, whether it’s for personal injuries, spinal
+                decompression, or to support your overall health.
               </p>
             </div>
           </div>
@@ -122,11 +121,11 @@ const Page = ({ data }) => {
       <section className="mb-20 md:mb-32">
         <div className="container">
           <header className="mb-12 md:mb-16 max-w-2xl">
-            <h2>Injuries Our Chiropractors Treat</h2>
+            <h2>Injuries We Treat</h2>
             <p className="md:text-lg">
-              At Inner Balance Institute, our San Diego chiropractors treat a
-              variety of injuries and help prevent them. Here’s what we treat
-              using non-invasive and effective techniques.
+              At Inner Balance Institute, our chiropractors treat a variety of
+              injuries and help prevent them. Here’s what we treat using
+              non-invasive and effective techniques.
             </p>
           </header>
 

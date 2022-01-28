@@ -78,7 +78,7 @@ const WhyUs = ({ className, headingLevel, heading }) => {
       <div className="container">
         <Header
           headingLevel={headingLevel || "h2"}
-          heading={heading || "Why Choose Our Chiropractors"}
+          heading={heading || "Inner Balance Institute"}
           subtext=""
           subtextSize=""
           textAlignment="md:mx-auto md:text-center"
