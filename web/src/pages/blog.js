@@ -6,7 +6,11 @@ import BlogPostPreviewList from "../components/Blog/BlogPostList";
 // import BlogPostFeaturedList from "../components/Blog/BlogPostFeaturedList";
 import GraphQLErrorList from "../components/Blog/graphql-error-list";
 import { graphql } from "gatsby";
-import { mapEdgesToNodes } from "../lib/helpers";
+import {
+  filterOutDocsPublishedInTheFuture,
+  filterOutDocsWithoutSlugs,
+  mapEdgesToNodes,
+} from "../lib/helpers";
 import CallToAction from "../components/Repeating/CTA";
 
 export const query = graphql`
@@ -51,7 +55,11 @@ const ArchivePage = (props) => {
     );
   }
 
-  const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
+    : [];
 
   return (
     <Layout headerStyle="overlap">
